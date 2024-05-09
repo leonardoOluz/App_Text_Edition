@@ -1,4 +1,10 @@
-img {
-    height: 35px;
+.img {
     align-self: center;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .lupa {
+        display: none;
+    }
 }

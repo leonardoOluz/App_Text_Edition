@@ -4,9 +4,34 @@
 }
 
 .cabecalho .container {
-    width: 96px;
     height: 48px;
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 1em;
+}
+
+.pesquisa {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .cabecalho {
+        justify-content: space-around;
+    }
+
+    .cabecalho .container .pesquisa {
+        display: block;
+        width: 431px;
+        height: 54px;
+        border: none;
+    }
+    
+    .pesquisa::placeholder {
+        /* border-radius: 8px; */
+        background-color: rgba(0, 0, 0, 0.5);
+        color: var(--branco);
+        padding: 28px 1em;
+    }
+
 }

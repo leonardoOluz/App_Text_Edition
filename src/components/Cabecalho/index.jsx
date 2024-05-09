@@ -7,9 +7,10 @@ import menuHamburgue from './image/Menu hamburguer.png';
 const Cabecalho = () => {
     return (
         <header className={styles.cabecalho}>
-            <Imagem src={logo} alt='logo alura' altura='38px'/>
+            <Imagem src={logo} alt='logo alura' altura='35px' />
             <div className={styles.container}>
-                <Imagem src={lupa} alt='lupa_pesquisa' altura='29px' />
+                <input type='text' placeholder='Busque por algo' className={styles.pesquisa}/>
+                <Imagem src={lupa} alt='lupa_pesquisa' altura='29px' newClass/>
                 <Imagem src={menuHamburgue} alt='menu_hamburgue' altura='48px' />
             </div>
         </header>
