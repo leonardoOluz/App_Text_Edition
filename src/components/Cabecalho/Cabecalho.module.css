@@ -1,0 +1,12 @@
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cabecalho .container {
+    width: 96px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
