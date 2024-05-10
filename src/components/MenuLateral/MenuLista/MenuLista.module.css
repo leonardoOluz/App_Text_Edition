@@ -1,0 +1,9 @@
+.menu_lista a {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    text-decoration: none;
+    color: var(--branco);
+    font-size: 16px;
+    line-height: 24px;
+}
