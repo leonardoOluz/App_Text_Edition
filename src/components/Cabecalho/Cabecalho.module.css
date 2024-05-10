@@ -1,37 +1,44 @@
 .cabecalho {
+    padding: 1em;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    gap: 2em;
 }
 
 .cabecalho .container {
-    height: 48px;
     display: flex;
-    justify-content: center;
     align-items: center;
-    gap: 1em;
 }
 
-.pesquisa {
+.perfil {
     display: none;
 }
 
 @media (min-width: 768px) {
     .cabecalho {
+        padding: 2em;
         justify-content: space-around;
     }
 
-    .cabecalho .container .pesquisa {
-        display: block;
-        width: 431px;
-        height: 54px;
-        border: none;
+    .cabecalho .container {
+        gap: 2em;
     }
-    
-    .pesquisa::placeholder {
-        /* border-radius: 8px; */
-        background-color: rgba(0, 0, 0, 0.5);
+}
+
+@media (min-width: 1024px) {
+
+    .perfil{
+        display: flex;
+        align-items: center;
+        gap: 1em;
+    }
+    p {
+        display: block;
         color: var(--branco);
-        padding: 28px 1em;
+    }
+
+    .cabecalho .container{
+        width: 50%;
     }
 
 }

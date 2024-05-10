@@ -1,8 +1,14 @@
 import styles from './Imagem.module.css';
 
-const Imagem = ({ alt, src, altura = '35px', newClass = false }) => {
+const Imagem = ({ alt, src, altura = '35px', lg = 'img' }) => {
     return (
-        <img className={newClass ? styles.lupa : styles.img} src={src} alt={alt} style={{ height: `${altura}` }} />
+        <img className={`
+        ${styles.img}
+        ${styles[lg]}
+        `}
+            src={src}
+            alt={alt}
+            style={{ height: `${altura}` }} />
     )
 }
 
