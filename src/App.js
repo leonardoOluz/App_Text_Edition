@@ -1,11 +1,9 @@
-import './App.css';
 import Cabecalho from './components/Cabecalho';
+import './App.css';
 
 function App() {
   return (
-    <>
-      <Cabecalho />
-    </>
+    <Cabecalho />
   );
 }
 
