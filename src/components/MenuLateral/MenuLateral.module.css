@@ -1,0 +1,18 @@
+.menu_lateral {
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.menu_lateral h2 {
+    padding: 1em;
+    color: var(--branco);
+    font-family: var(--font);
+}
+
+.menu_lateral ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
