@@ -1,6 +1,6 @@
 import Cabecalho from './components/Cabecalho';
 import './App.css';
-import MenuLateral from 'components/MenuLateral';
+import MenuLateral from 'components/MenuNavegacao';
 
 function App() {
   return (

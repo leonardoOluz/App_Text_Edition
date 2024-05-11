@@ -1,17 +1,17 @@
-.menu_lateral {
+.menu_navegacao {
     padding: 1em 3em;
     display: flex;
     flex-direction: column;
     
 }
 
-.menu_lateral h2 {
+.menu_navegacao h2 {
     padding: 1em 0;
     color: var(--branco);
     font-family: var(--font);
 }
 
-.menu_lateral ul {
+.menu_navegacao ul {
     display: flex;
     flex-direction: column;
     gap: 1em;
