@@ -1,11 +1,11 @@
 import MenuLista from "./MenuLista";
-import styles from "./MenuLateral.module.css";
+import styles from "./MenuNavegacao.module.css";
 import iconCode from "./IconCode.png";
 import iconComunidade from "./iconComunidade.png";
 
-const MenuLateral = () => {
+const MenuNavegacao = () => {
     return(
-        <aside className={styles.menu_lateral}>
+        <aside className={styles.menu_navegacao}>
             <h2>Menu</h2>
                 <ul>
                     <MenuLista children='Editor de código' imagem={iconCode} link={"#"} texto={'icone code'}/>
@@ -15,4 +15,4 @@ const MenuLateral = () => {
     )
 }
 
-export default MenuLateral;
+export default MenuNavegacao;
