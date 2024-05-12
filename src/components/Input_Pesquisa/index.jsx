@@ -1,8 +1,8 @@
 import styles from './InputPesquisa.module.css';
 
-const InputPesquisa = ({text = 'text', placText, stilos = 'pesquisa'}) => {
+const InputPesquisa = ({text = 'text', placText, stilos }) => {
     return(
-        <input type={text} placeholder={placText} className={styles[stilos]}/>
+        <input type={text} placeholder={placText} className={`input_padrao ${styles[stilos]}`}/>
     )
 
 }

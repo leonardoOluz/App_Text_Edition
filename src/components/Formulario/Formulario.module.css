@@ -1,0 +1,26 @@
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    padding-top: 2.5em;
+    color: var(--branco);
+    font-family: var(--font);
+    font-weight: 300;
+    line-height: 18px;
+    font-stretch: expanded;
+    font-size: 12px;
+}
+
+.seletor {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+@media (min-width: 768px) {
+    .container {
+        display: flex;
+        justify-content: space-between;
+        gap: 1em;
+    }
+}

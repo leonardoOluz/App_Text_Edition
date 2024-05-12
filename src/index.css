@@ -1,26 +1,13 @@
 :root {
 	--Blue-dark: #051D3B;
 	--blue-light: #6BD1FF;
-	--blue: #5081FB;
+	--Blue-300: #5081FB;
+    --Blue-200: #7BA4FC;
+    --Blue-100: #96B9FD;
 	--purple: #5F75E2;
 	--pink: #FF6BCD;
 	--font: "Inter", sans-serif;
 	--branco: #ffffff;
-}
-
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-	display: block;
 }
 
 body {
@@ -32,25 +19,27 @@ body {
 	width: 100vw;
 }
 
-ol,
-ul {
-	list-style: none;
+/* Inputs dos formularios */
+.input_padrao {
+    margin-top: 1em;
+    display: block;
+    height: 54px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: var(--branco);
+    border-radius: 8px;
+    outline: none;
+    padding: 0 1em;
 }
-
-blockquote,
-q {
-	quotes: none;
+/* placeholder dos inputs*/
+.input_padrao::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+    line-height: 24px;
+    font-size: 16px;
+    font-family: var(--font);
+    font-weight: 400;
 }
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-	content: '';
-	content: none;
-}
-
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+/* hover mais claro dos formularios */
+.input_padrao:hover{
+    background-color: rgba(255, 255, 255, 0.3);
 }

@@ -2,23 +2,10 @@
     display: none;
 }
 
-.input {
-    display: block;
-    height: 54px;
-    border: none;
-    background-color: rgba(255, 255, 255, 0.2);
-    color: var(--branco);
-    border-radius: 8px;
-    outline: none;
-    padding: 0 1em;
-}
-
-.input::placeholder {
-    color: rgba(255, 255, 255, 0.5);
-    line-height: 24px;
-    font-size: 16px;
-    font-family: var(--font);
-    font-weight: 400;
+.color {
+    width: 100%;
+    padding: 0 2px;
+    border: solid 1px var(--branco); 
 }
 
 @media (min-width: 768px) {
@@ -26,20 +13,7 @@
         display: block;
         width: 431px;
         height: 54px;
-        border: none;
-        background-color: rgba(255, 255, 255, 0.2);
-        color: var(--branco);
-        border-radius: 8px;
-        outline: none;
         padding: 0 1em;
-    }
-
-    .pesquisa::placeholder {
-        color: rgba(255, 255, 255, 0.5);
-        line-height: 24px;
-        font-size: 16px;
-        font-family: var(--font);
-        font-weight: 400;
     }
 }
 
