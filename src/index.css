@@ -1,6 +1,6 @@
 :root {
 	--Blue-dark: #051D3B;
-	--blue-light: #6BD1FF;
+	--blue-light:  #6BD1FF;
 	--Blue-300: #5081FB;
     --Blue-200: #7BA4FC;
     --Blue-100: #96B9FD;
@@ -8,6 +8,7 @@
 	--pink: #FF6BCD;
 	--font: "Inter", sans-serif;
 	--branco: #ffffff;
+    --dark-gray: #141414;
 }
 
 body {
