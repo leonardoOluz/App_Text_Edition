@@ -1,16 +1,12 @@
-import Titulo from 'components/Titulo';
-import styles from './MenuLateral.module.css';
-import InputPesquisa from 'components/Input_Pesquisa';
+import Formulario from 'components/Formulario';
+import styles from './Menu_Lateral.module.css';
 
 const MenuLateral = () => {
-    return(
+    return (
         <aside className={styles.menu_lateral}>
-            <form>
-                <Titulo>Seu Projeto</Titulo>
-                <InputPesquisa placText='Nome do seu projeto' text='text' stilos='input'/>
-            </form>
+            <Formulario />
         </aside>
     )
 };
 
-export default MenuLateral
+export default MenuLateral;
