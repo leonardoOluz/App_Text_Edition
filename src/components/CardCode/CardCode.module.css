@@ -1,0 +1,40 @@
+section {
+    position: relative;
+    max-width: 640px;
+    width: 92%;
+    /* text-align: center; */
+    display: flex;
+    /* justify-content: center; */
+}
+
+section textarea {
+    width: 80%;
+    height: 428px;
+    padding: 2em 0 0 .5em;
+    /* margin: 2em; */
+    border: 28px solid var(--blue-light);
+    border-radius: 8px;
+    color: var(--branco);
+    /* justify-content: center; */
+    /* align-items: center; */
+    background-color: var(--dark-gray);
+}
+
+section textarea:hover {
+    outline: none;
+}
+
+section .container {
+    position: absolute;
+    left: 50px;
+    top: 40px;
+    display: flex;
+    gap: .5em;
+}
+
+section .container .circulos {
+    width: 12px;
+    height: 12px;
+    border-radius: 16px;
+    background-color: #FF5F56;
+}
