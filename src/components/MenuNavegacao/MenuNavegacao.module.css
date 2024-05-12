@@ -1,18 +1,24 @@
 .menu_navegacao {
-    padding: 1em 3em;
-    display: flex;
-    flex-direction: column;
+    display: none;
+}
+
+@media (min-width: 1024px) {
+    .menu_navegacao {
+        padding: 1em 3em;
+        display: flex;
+        flex-direction: column;
+        
+    }
     
-}
-
-.menu_navegacao h2 {
-    padding: 1em 0;
-    color: var(--branco);
-    font-family: var(--font);
-}
-
-.menu_navegacao ul {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
+    .menu_navegacao h2 {
+        padding: 1em 0;
+        color: var(--branco);
+        font-family: var(--font);
+    }
+    
+    .menu_navegacao ul {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+    }    
 }
