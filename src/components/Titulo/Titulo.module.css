@@ -1,0 +1,8 @@
+h2 {
+    padding: 1em 0;
+    color: var(--branco);
+    font-family: var(--font);
+    font-weight: 400;
+    line-height: 18px;
+    font-size: 12px;
+}

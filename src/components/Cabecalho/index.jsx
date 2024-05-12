@@ -3,7 +3,7 @@ import Imagem from './Imagem';
 import logo from './image/Logo.png'
 import lupa from './image/Font Awesome Icon (1).png'
 import menuHamburgue from './image/Menu hamburguer.png';
-import InputPesquisa from '../InputPesquisa';
+import InputPesquisa from '../Input_Pesquisa';
 import fotoPerfil from '@/../assets/LeoLuz.jpg'
 
 const Cabecalho = () => {
@@ -11,7 +11,7 @@ const Cabecalho = () => {
         <header className={styles.cabecalho}>
             <Imagem src={logo} alt='logo alura' altura='35px' />
             <div className={styles.container}>
-                <InputPesquisa placText='Busque por algo' text='text' />
+                <InputPesquisa placText='Busque por algo' text='text' stilos='pesquisa'/>
                 <Imagem src={lupa} alt='lupa_pesquisa' altura='29px' lg='lupa' />
                 <Imagem src={menuHamburgue} alt='menu hamburgue' altura='48px' lg='menu-hamburguer' />
             </div>
