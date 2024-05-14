@@ -1,61 +1,81 @@
-section {
+section .container_principal {
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-section .border {
-    width: 70%;
+section .container_principal .border {
+    width: 95%;
     position: relative;
-    padding: 1.8em;
+    height: 492px;
     display: flex;
     justify-content: center;
     background-color: var(--blue-light);
     border-radius: 8px;
 }
 
-
-section .border textarea {
+section .container_principal .border textarea {
     border-radius: 8px;
     width: 100%;
-    height: 373px;
+    height: 79%;
+    margin: 2em;
     background-color: var(--dark-gray);
     resize: none;
-    padding: 3em 1em 1em 1em;
     color: var(--branco);
+    padding: 3em 1em 1em 1em;
+    padding-top: 3em;
 }
 
-section .border textarea:hover:focus {
+section .container_principal .border textarea:hover:focus {
     outline: none;
 }
 
-section .border .container {
+section .container_principal  .border .container {
     position: absolute;
-    left: 50px;
-    top: 45px;
+    left: 45px;
+    top: 40px;
     display: flex;
     gap: .5em;
 }
 
-section .container .circulos {
+section .container_principal .container .circulos {
     width: 12px;
     height: 12px;
     border-radius: 16px;
     background-color: #FF5F56;
 }
 
+.btn{
+    margin-top: 2em;
+    color: var(--branco);
+    width: 95%;
+    height: 56px;
+    border: none;
+    border-radius: 8px;
+    background-color: rgba(80, 129, 251, 0.08);
+}
+
 @media (min-width: 768px) {
-    section .border {
-        width: 80%;
-        max-width: 647px;
+    section .container_principal .border{
+        width: 704px;
+        height: 366px;
+    }
+    
+    .btn {
+        width: 704px;        
     }
 
-    section .border textarea {
-        max-height: 254px;
+    section .container_principal .border textarea {
+        height: 71%;
     }
 }
 
 @media (min-width: 1024px) {
-    section .border {
-        max-width: 695px;
+    section .container_principal .border{
+        width: 752px;
+    }
+    
+    .btn {
+        width: 752px;        
     }
 }

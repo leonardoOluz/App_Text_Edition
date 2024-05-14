@@ -8,7 +8,7 @@ const Formulario = () => {
             <form>
                 <label>Seu Projeto</label>
                 <InputPesquisa placText='Nome do seu projeto' text='text' />
-                <textarea className='input_padrao' style={{ width: 'auto', padding: '1em' }} placeholder='Descrição do seu projeto' />
+                <textarea className='input_padrao' style={{ width: 'auto', padding: '1em', resize: 'none' }} placeholder='Descrição do seu projeto' />
                 <label>Personalização</label>
                 <div className={styles.container}>
                     <select className={`input_padrao ${styles.seletor} `} style={{ width: '100%' }}>
