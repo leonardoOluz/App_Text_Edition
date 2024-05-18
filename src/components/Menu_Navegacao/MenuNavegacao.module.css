@@ -4,7 +4,7 @@
 
 @media (min-width: 1024px) {
     .menu_navegacao {
-        padding: 1em 3em;
+        padding: 1em 0 1em 2em;
         display: flex;
         flex-direction: column;
 

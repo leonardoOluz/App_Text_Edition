@@ -1,12 +1,12 @@
+import { Link } from 'react-router-dom';
 import styles from './MenuLista.module.css';
 
-const MenuLista = ({link, imagem, texto, children }) => {
+const MenuLista = ({ link, imagem, texto, children }) => {
     return (
         <li className={styles.menu_lista}>
-            <a href={link}>
-                <img src={imagem} alt={texto} />
+            <Link to={link}><img src={imagem} alt={texto} />
                 {children}
-            </a>
+            </Link>
         </li>
     )
 }

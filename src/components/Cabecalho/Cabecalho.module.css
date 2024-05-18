@@ -14,10 +14,13 @@
     display: none;
 }
 
+.cabecalho .logo {
+    align-self: center;
+}
+
 @media (min-width: 768px) {
     .cabecalho {
         padding: 2em;
-        justify-content: space-around;
     }
 
     .cabecalho .container {
@@ -27,18 +30,30 @@
 
 @media (min-width: 1024px) {
 
-    .perfil{
+    .cabecalho {
+        justify-content: space-between;
+        width: auto;
+    }
+
+    .perfil {
+        width: 145px;
         display: flex;
         align-items: center;
         gap: 1em;
     }
+
     p {
         display: block;
         color: var(--branco);
     }
 
-    .cabecalho .container{
-        width: 50%;
+    .cabecalho .container {
+        width: 54%;
+        max-width: 752px;
+    }
+
+    .cabecalho .logo {
+        width: 145px;
     }
 
 }
