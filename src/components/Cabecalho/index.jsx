@@ -9,9 +9,11 @@ import fotoPerfil from '@/../assets/LeoLuz.jpg'
 const Cabecalho = () => {
     return (
         <header className={styles.cabecalho}>
-            <Imagem src={logo} alt='logo alura' altura='35px' />
+            <div className={styles.logo}>
+                <Imagem src={logo} alt='logo alura' altura='35px' />
+            </div>
             <div className={styles.container}>
-                <InputPesquisa placText='Busque por algo' text='text' stilos='pesquisa'/>
+                <InputPesquisa placText='Busque por algo' text='text' stilos='pesquisa' />
                 <Imagem src={lupa} alt='lupa_pesquisa' altura='29px' lg='lupa' />
                 <Imagem src={menuHamburgue} alt='menu hamburgue' altura='48px' lg='menu-hamburguer' />
             </div>

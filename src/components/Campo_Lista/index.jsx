@@ -5,8 +5,8 @@ import iconComunidade from "./image/iconComunidade.png";
 
 const CampoLista = () => {
     return (<ul className={styles.ul}>
-        <MenuLista children='Editor de código' imagem={iconCode} link={"#"} texto={'icone code'} />
-        <MenuLista children='Comunidade' imagem={iconComunidade} link={"#"} texto={'icone code'} />
+        <MenuLista children='Editor de código' imagem={iconCode} link={"/"} texto={'icone code'}  />
+        <MenuLista children='Comunidade' imagem={iconComunidade} link={"comunidade"} texto={'icone code'} />
     </ul>)
 }
 

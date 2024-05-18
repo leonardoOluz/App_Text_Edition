@@ -1,0 +1,14 @@
+.not_found {
+    text-align: center;
+    color: var(--branco);
+    padding-top: 1em;
+    font-size: 21px;
+}
+
+@media (min-width: 1024px) {
+    .not_found {
+     text-align: left;
+     font-size: 26px;
+     padding-top: 5em;
+    }      
+}

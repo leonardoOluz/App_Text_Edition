@@ -1,0 +1,24 @@
+@media (min-width: 1024px) {
+
+    .container_display {
+        display: grid;
+        grid-template-areas:
+            'cabecalho cabecalho cabecalho'
+            'menu_navegacao card_code card_code'
+        ;
+        grid-template-columns: 23% 54% 23%;
+    }
+
+    header{
+        grid-area: cabecalho;
+    }
+
+    .menu_navegacao{
+        grid-area: menu_navegacao;
+    }
+
+    main{
+        grid-area: card_code;
+    }
+
+}

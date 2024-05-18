@@ -1,7 +1,8 @@
-import styles from "./CardCode.module.css";
+// import Botao from "components/Botao";
+import styles from "./EditorCodigo.module.css";
 
-const CardCode = () => {
-    return (<section className={styles.section}>
+const EditorCodigo = () => {
+    return (        
         <div className={styles.container_principal}>
             <div className={styles.border}>
                 <textarea placeholder="Edition code" />
@@ -11,9 +12,9 @@ const CardCode = () => {
                     <div className={styles.circulos} style={{ backgroundColor: '#27C93F' }} />
                 </div>
             </div>
-            <button  className={styles.btn}>Visualizar com o highlight</button>
+            <button  className={styles.btn}>Visualizar com o highlight</button>            
         </div>
-    </section>)
+    )
 };
 
-export default CardCode;
+export default EditorCodigo;
