@@ -1,12 +1,11 @@
 import ConteudoDaSecao from "components/ConteudoDaSecao";
-import styles from "./EditorDoCodigo.module.css";
+import { useLocation } from "react-router-dom";
 
 const EditorDoCodigo = () => {
-    return (<>
-        <main className={styles.editor_codigo}>
-            <ConteudoDaSecao/>
-        </main>
-    </>)
+    let location = useLocation();
+    return (<main>
+        <ConteudoDaSecao to={location.pathname} />
+    </main>)
 }
 
 export default EditorDoCodigo;
