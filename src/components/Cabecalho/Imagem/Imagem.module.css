@@ -6,6 +6,11 @@
     display: none;
 }
 
+.postagem {
+    border-radius: 55px;
+}
+
+
 @media (min-width: 768px) {
     .lupa {
         display: none;
