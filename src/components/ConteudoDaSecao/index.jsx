@@ -9,6 +9,8 @@ const ConteudoDaSecao = ({ to }) => {
                 <>
                     <Postagem />
                     <Postagem />
+                    <Postagem />
+                    <Postagem />
                 </>
             }
         </section>

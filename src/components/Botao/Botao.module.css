@@ -1,6 +1,7 @@
 .btn{
     color: var(--Blue-dark);
     background-color: var(--Blue-300);
+    cursor: pointer;
 }
 .btn:hover{
     background-color: var(--Blue-200);

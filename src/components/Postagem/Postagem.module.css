@@ -83,5 +83,18 @@
     .postagem{
         width: 100%;
         max-width: 704px;
-    }   
+    }
+}
+
+@media (min-width: 1024px) {
+    .postagem{
+        max-width: 520px;
+    } 
+    .postagem .border{
+        height: 282px;
+    }  
+    .postagem .border .card_code{
+        height: 67%;
+        margin: 1em;
+    }
 }

@@ -52,3 +52,4 @@ body {
 /* @media (min-width: 1024px) {
         
 } */
+iframe#webpack-dev-server-client-overlay{display:none!important}

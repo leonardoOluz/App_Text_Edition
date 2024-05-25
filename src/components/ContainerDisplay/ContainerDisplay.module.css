@@ -6,7 +6,7 @@
             'cabecalho cabecalho cabecalho'
             'menu_navegacao card_code card_code'
         ;
-        grid-template-columns: 23% 54% 23%;
+        grid-template-columns: 20% 57% 23%;
     }
 
     header{
