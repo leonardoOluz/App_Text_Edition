@@ -1,6 +1,6 @@
 import styles from './Imagem.module.css';
 
-const Imagem = ({ alt, src, altura = '35px', lg = 'img' }) => {
+const Imagem = ({ alt, src, altura = '35px', lg = 'img', comprimento = '100%'  }) => {
     return (
         <img className={`
         ${styles.img}
@@ -8,7 +8,7 @@ const Imagem = ({ alt, src, altura = '35px', lg = 'img' }) => {
         `}
             src={src}
             alt={alt}
-            style={{ height: `${altura}` }} />
+            style={{ height: `${altura}`, width: `${comprimento}` }} />
     )
 }
 
