@@ -8,9 +8,9 @@ import { CodigoContext } from 'context/CodigoContexto';
 
 const Formulario = () => {
     const { setLinguagem } = useContext(CodigoContext);
-    
+
     function selecionado(e) {
-        setLinguagem(e.target.value)
+        setLinguagem((prev) => prev = e.target.value)
     }
 
     return (

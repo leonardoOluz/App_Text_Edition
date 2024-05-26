@@ -5,7 +5,7 @@
 }
 .btn:hover{
     background-color: var(--Blue-200);
-    border: solid 4px var(--Blue-300)
+    border: solid 4px var(--Blue-300);
 }
 
 .btn:focus{
