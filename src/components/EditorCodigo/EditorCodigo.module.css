@@ -10,7 +10,6 @@
     height: 492px;
     display: flex;
     justify-content: center;
-    background-color: var(--blue-light);
     border-radius: 8px;
 }
 

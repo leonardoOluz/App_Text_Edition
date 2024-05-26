@@ -4,7 +4,7 @@ import TextEditor from "./TextEditor";
 import { CodigoContext } from "context/CodigoContexto";
 
 const EditorCodigo = () => {
-    const { setShow, show } = useContext(CodigoContext)
+    const { setShow, show, cor } = useContext(CodigoContext)
 
     const highlight = (e) => {
         e.preventDefault()
@@ -13,7 +13,7 @@ const EditorCodigo = () => {
 
     return (
         <div className={styles.container_principal}>
-            <div className={styles.border}>
+            <div className={styles.border} style={{backgroundColor: cor}}>
                 <TextEditor />
                 <div className={styles.container}>
                     <div className={styles.circulos} />
