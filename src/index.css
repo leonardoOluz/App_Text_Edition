@@ -1,6 +1,6 @@
 :root {
-	--Blue-dark: #051D3B;
-    --blue-dark-fund: #05233b;
+	--Blue-dark: #05233b;
+    --blue-dark-fund:  #051D3B;
 	--blue-light:  #6BD1FF;
 	--Blue-300: #5081FB;
     --Blue-200: #7BA4FC;
@@ -47,9 +47,4 @@ body {
     background-color: rgba(255, 255, 255, 0.3);
 }
 
-/* Display Grid */
-
-/* @media (min-width: 1024px) {
-        
-} */
 iframe#webpack-dev-server-client-overlay{display:none!important}
