@@ -7,9 +7,9 @@ import { useContext } from 'react';
 import { CodigoContext } from 'context/CodigoContexto';
 
 const Formulario = () => {
-    const { setLinguagem } = useContext(CodigoContext);
+    const { setLinguagem, cor, setCor } = useContext(CodigoContext);
 
-    function selecionado(e) {
+    function optionSelecionado(e) {
         setLinguagem((prev) => prev = e.target.value)
     }
 
@@ -22,12 +22,12 @@ const Formulario = () => {
                 <textarea className='input_padrao' style={{ width: 'auto', padding: '1em', resize: 'none' }} placeholder='Descrição do seu projeto' />
                 <label>Personalização</label>
                 <div className={styles.container}>
-                    <select onChange={selecionado} className={`input_padrao ${styles.seletor} `} style={{ width: '100%' }}>
+                    <select onChange={optionSelecionado} className={`input_padrao ${styles.seletor} `} style={{ width: '100%' }}>
                         <Option childrean={'javascript'} valores={'javascript'} />
                         <Option childrean={'html'} valores={'html'} />
                         <Option childrean={'css'} valores={'css'} />
                     </select>
-                    <InputPesquisa placText='Nome do seu projeto' text='color' stilos='color' />
+                    <InputPesquisa valor={cor} change={setCor} placText='Nome do seu projeto' text='color' stilos='color' />
                 </div>
                 <Botao Children='Salvar Projeto' />
             </div>

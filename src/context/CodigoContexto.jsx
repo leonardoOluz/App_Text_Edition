@@ -19,6 +19,7 @@ export const CodigoProvider = ({ children }) => {
     const [codigo, setCodigo] = useState("");
     const [linguagem, setLinguagem] = useState("javascript");
     const [show, setShow] = useState(false)
+    const [cor, setCor] = useState("#5081FB")
 
     return (
         <CodigoContext.Provider value={{
@@ -29,7 +30,9 @@ export const CodigoProvider = ({ children }) => {
             postarCode,
             setPostarCode,
             show,
-            setShow
+            setShow,
+            cor,
+            setCor
         }}>
             {children}
         </CodigoContext.Provider>
