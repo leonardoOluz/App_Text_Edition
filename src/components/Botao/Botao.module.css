@@ -1,13 +1,64 @@
-.btn{
+.btn {
+    margin: 2.5em 0;
     color: var(--Blue-dark);
     background-color: var(--Blue-300);
     cursor: pointer;
-}
-.btn:hover{
-    background-color: var(--Blue-200);
-    border: solid 4px var(--Blue-300);
+    transition: 800ms;
 }
 
-.btn:focus{
-    background-color: var(--Blue-100);
+.btn:hover {
+    background-color: var(--Blue-200);
+}
+
+.btn:focus {
+    animation: deslizar 200ms;
+    width: 50%;
+}
+
+.btn:active {
+    background-color: var(--Blue-200);
+    border: 4px solid var(--Blue-300);
+}
+
+@keyframes deslizar {
+    from {
+        width: 100%;
+    }
+
+    to {
+        width: 50%;
+        background-color: var(--Blue-300);
+    }
+}
+
+@media (min-width: 768px) {
+    .btn:focus {
+        /* width: 20%; */
+    }
+
+    @keyframes deslizar {
+        from {
+            width: 100%;
+        }
+
+        to {
+            width: 20%;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .btn:focus {
+        /* width: 50%; */
+    }
+
+    @keyframes deslizar {
+        from {
+            width: 100%;
+        }
+
+        to {
+            width: 50%;
+        }
+    }
 }

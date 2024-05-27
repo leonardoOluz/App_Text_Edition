@@ -4,12 +4,14 @@
 
 .color {
     width: 100%;
-    padding: 0 2px;
-    border: solid 1px var(--branco); 
+    padding: 2px 6px;
+    border: solid 1px var(--branco);
+    background-color: var(--Blue-dark);
 }
 
 @media (min-width: 768px) {
     .pesquisa {
+        margin: 0;
         display: block;
         width: 431px;
         height: 54px;

@@ -3,6 +3,7 @@
     display: flex;
     justify-content: space-around;
     gap: 2em;
+    margin-bottom: 2em;
 }
 
 .cabecalho .container {
@@ -11,17 +12,19 @@
     gap: .8em;
 }
 
-.perfil {
-    display: none;
-}
-
 .cabecalho .logo {
     align-self: center;
 }
 
+.perfil {
+    display: none;
+}
+
 @media (min-width: 768px) {
+
     .cabecalho {
         padding: 2em;
+        margin-bottom: 0;
     }
 
     .cabecalho .container {
@@ -30,17 +33,28 @@
 }
 
 @media (min-width: 1024px) {
+    .menu_hamburguer {
+        display: none;
+    }
 
     .cabecalho {
         justify-content: space-between;
         width: auto;
+        align-items: center;
     }
 
     .perfil {
-        width: 145px;
         display: flex;
+        padding: .5em;
+        height: 35px;
         align-items: center;
-        gap: 1em;
+        gap: .5em;
+        border-radius: 8px;
+        transition: 550ms;
+    }
+
+    .perfil:hover {
+        background-color: rgba(255, 255, 255, 0.1);
     }
 
     p {
@@ -49,8 +63,9 @@
     }
 
     .cabecalho .container {
-        width: 54%;
+        width: 60%;
         max-width: 752px;
+        margin-right: 6em;
     }
 
     .cabecalho .logo {

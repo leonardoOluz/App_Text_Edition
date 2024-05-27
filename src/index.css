@@ -1,29 +1,37 @@
 :root {
-	--Blue-dark: #05233b;
-    --blue-dark-fund:  #051D3B;
-	--blue-light:  #6BD1FF;
-	--Blue-300: #5081FB;
+    --azul-span: #2d415b;
+    --Blue-dark: #05233b;
+    --blue-dark-fund: #051D3B;
+    --blue-light: #6BD1FF;
+    --Blue-300: #5081FB;
     --Blue-200: #7BA4FC;
     --Blue-100: #96B9FD;
-	--purple: #5F75E2;
-	--pink: #FF6BCD;
-	--font: "Inter", sans-serif;
-	--branco: #ffffff;
+    --purple: #5F75E2;
+    --pink: #FF6BCD;
+    --font: "Inter", sans-serif;
+    --branco: #ffffff;
     --dark-gray: #141414;
 }
 
+a,
+ul {
+    list-style: none;
+    text-decoration: none;
+}
+
 body {
-	background-color: var(--blue-dark-fund);
-	margin: 0;
+    background-color: var(--blue-dark-fund);
+    margin: 0;
     padding: 0;
-	font-family: var(--font);
-	font-size: 16px;
-	font-weight: 400;
+    font-family: var(--font);
+    font-size: 16px;
+    font-weight: 400;
     line-height: 24px;
 }
 
-/* Inputs dos formularios */
-.input_padrao {
+/* Inputs e btn dos formularios */
+.input_padrao,
+.btn_padrao {
     margin-top: 1em;
     display: block;
     height: 54px;
@@ -34,6 +42,7 @@ body {
     outline: none;
     padding: 0 1em;
 }
+
 /* placeholder dos inputs dos formularios*/
 .input_padrao::placeholder {
     color: rgba(255, 255, 255, 0.5);
@@ -42,9 +51,22 @@ body {
     font-family: var(--font);
     font-weight: 400;
 }
+
 /* hover mais claro dos formularios */
-.input_padrao:hover{
+.input_padrao:hover {
     background-color: rgba(255, 255, 255, 0.3);
 }
 
-iframe#webpack-dev-server-client-overlay{display:none!important}
+/* Container das postagem de codigo  */
+.container_postagem {
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: .4em;
+    color: var(--branco);
+}
+
+iframe#webpack-dev-server-client-overlay {
+    display: none !important
+}

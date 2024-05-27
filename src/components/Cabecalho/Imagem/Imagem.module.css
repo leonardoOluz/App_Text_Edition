@@ -18,13 +18,9 @@
 }
 
 @media (min-width: 1024px) {
-    .menu-hamburguer {
-        display: none;
-    }
 
     .foto {
         display: block;
-        width: 35px;
-        border-radius: 16px;
+        border-radius: 55px;
     }
 }
