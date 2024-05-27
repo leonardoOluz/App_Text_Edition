@@ -40,12 +40,11 @@
 }
 
 .btn:hover {
-    border: solid rgba(80, 129, 251, 0.08);
+    background-color: rgba(80, 129, 251, 0.12);
 }
 
-.btn:focus {
-    background-color: rgba(80, 129, 251, 0.1);
-    ;
+.btn:active {
+    border: 4px solid rgba(80, 129, 251, 0.09);
 }
 
 @media (min-width: 768px) {
@@ -55,10 +54,6 @@
 
     .container_principal .border {
         height: 366px;
-    }
-
-    .btn {
-        /* max-width: 704px; */
     }
 
     .container_principal .border textarea {

@@ -18,8 +18,9 @@ export const CodigoProvider = ({ children }) => {
     const [postarCode, setPostarCode] = useState(postCode);
     const [codigo, setCodigo] = useState("");
     const [linguagem, setLinguagem] = useState("javascript");
-    const [show, setShow] = useState(false)
-    const [cor, setCor] = useState("#5081FB")
+    const [show, setShow] = useState(false);
+    const [cor, setCor] = useState("#5081FB");
+    const [click, setClick] = useState(true);
 
     return (
         <CodigoContext.Provider value={{
@@ -32,7 +33,9 @@ export const CodigoProvider = ({ children }) => {
             show,
             setShow,
             cor,
-            setCor
+            setCor,
+            click,
+            setClick
         }}>
             {children}
         </CodigoContext.Provider>

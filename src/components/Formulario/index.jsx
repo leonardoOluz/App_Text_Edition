@@ -18,7 +18,7 @@ const Formulario = () => {
             <EditorCodigo />
             <div className={styles.container_formulario}>
                 <label className={styles.label_form}>Seu Projeto</label>
-                <InputPesquisa placText='Nome do seu projeto' text='text' />
+                <InputPesquisa placText='Nome do seu projeto' text='text' stilos=""/>
                 <textarea className='input_padrao' style={{ width: 'auto', padding: '1em', resize: 'none' }} placeholder='Descrição do seu projeto' />
                 <label>Personalização</label>
                 <div className={styles.container}>

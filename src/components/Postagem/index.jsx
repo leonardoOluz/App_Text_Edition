@@ -17,17 +17,17 @@ const Postagem = () => {
         <h2>Título do projeto</h2>
         <p>Essa é a descrição do meu projeto.</p>
         <div className={styles.descricao}>
-            <div className={styles.container_postagem}>
-                <div className={styles.container_postagem}>
+            <div className={`container_postagem`}>
+                <div className={`container_postagem`}>
                     <img src={iconMensagem} alt="icone de mensagem" />
                     <span>9</span>
                 </div>
-                <div className={styles.container_postagem} >
+                <div className={`container_postagem`} >
                     <img src={iconCoracao} alt=" icone de coração de curtida" />
                     <span>7</span>
                 </div>
             </div>
-            <div className={styles.container_postagem} >
+            <div className={`container_postagem`} >
                 <Imagem src={fotoPerfil} alt='foto perfil' lg="postagem" altura="25px" comprimento="35px" />
                 <p className={styles.perfil}>@Leo</p>
             </div>

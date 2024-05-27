@@ -28,7 +28,7 @@ label {
     .container {
         display: flex;
         justify-content: space-between;
-        gap: 1em;
+        gap: .5em;
     }
 }
 

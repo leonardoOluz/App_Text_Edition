@@ -43,7 +43,6 @@
     height: 75%;
     margin: 2em;
     background-color: var(--dark-gray);
-    resize: none;
     color: var(--branco);
     padding: 3em 1em 1em 1em;
     padding-top: 3em;
@@ -70,13 +69,6 @@
     display: flex;
     justify-content: space-between;
     gap: 2.5em;
-}
-
-.container_postagem {
-    align-self: center;
-    display: flex;
-    gap: .4em;
-
 }
 
 @media (min-width: 768px) {

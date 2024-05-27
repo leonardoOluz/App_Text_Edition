@@ -1,0 +1,30 @@
+.menu_span {
+    position: fixed;
+    top: 10%;
+    right: 5%;
+    width: 198px;
+    height: 100%;
+    padding: 1em 1.8em;
+    background-color: var(--azul-span);
+    border-radius: 8px;
+}
+
+.container_usuario {
+    border-top: 0.5px solid rgba(255, 255, 255, 0.2);
+    padding-top: 2em;
+    display: flex;
+    text-align: center;
+    gap: .4em;
+    color: var(--branco);
+}
+
+@media (min-width: 768px) {
+    .menu_span{
+        top: 12%;
+    }
+}
+@media (min-width: 1024px) {
+    .menu_span{
+        display: none;
+    }
+}

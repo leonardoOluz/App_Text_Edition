@@ -3,7 +3,16 @@
     gap: 1em;
     align-items: center;
     text-decoration: none;
-    color: var(--branco);
+    color: rgba(255, 255, 255, 0.2);
     font-size: 16px;
     line-height: 24px;
+}
+
+.menu_lista a img {
+    border-radius: 16px;
+    transition: 500ms;
+}
+
+.menu_lista:hover img {
+    background: var(--Blue-300);
 }
