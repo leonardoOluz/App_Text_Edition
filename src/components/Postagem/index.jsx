@@ -26,15 +26,15 @@ const Postagem = () => {
                     <img src={iconMensagem} alt="icone de mensagem" />
                     <span>9</span>
                 </div>
-                <div className={`perfil ${styles.heart}`}  onClick={() => setCoracao((prev) => prev = !prev)}>
+                <div className={`perfil ${styles.heart}`} onClick={() => setCoracao((prev) => prev = !prev)}>
                     {coracao
-                        ? <FaHeart size={20} />
-                        : <FaHeart color="#f65151" size={20} />
+                        ? <FaHeart color="#f65151" size={20} />
+                        : <FaHeart size={20} />
                     }
                     <span>7</span>
                 </div>
             </div>
-            <div className={`perfil`} >
+            <div className={`perfil ${styles.perfil_hover}`} >
                 <Imagem src={fotoPerfil} alt='foto perfil' lg="postagem" altura="25px" comprimento="35px" />
                 <p className={styles.perfil}>@Leo</p>
             </div>
