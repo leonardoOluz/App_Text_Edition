@@ -71,6 +71,12 @@
     gap: 2.5em;
 }
 
+/* Designer para o coração */
+.heart {
+    cursor: pointer;
+    align-self: center;
+}
+
 @media (min-width: 768px) {
     .postagem{
         width: 100%;

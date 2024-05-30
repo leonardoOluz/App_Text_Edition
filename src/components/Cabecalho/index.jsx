@@ -23,6 +23,7 @@ const Cabecalho = () => {
 
     function clickInput() {
         setClickPesquisa((prev) => prev = !prev);
+        if(click) setClick((prev) => prev = !prev);
     }
 
     return (
@@ -44,7 +45,7 @@ const Cabecalho = () => {
                             : <LuMenu className={styles.menu_hamburguer} onClick={clickMenu} size={25} color='white' />
                         }
                     </div>
-                    <div className={styles.perfil}>
+                    <div className={`${styles.perfil_lg_none} perfil`}>
                         <Imagem src={fotoPerfil} alt='foto perfil' lg='foto' altura="25px" comprimento="35px" />
                         <p>@Leo</p>
                     </div>
