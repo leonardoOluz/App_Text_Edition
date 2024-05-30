@@ -2,7 +2,7 @@
     padding: 1em;
     display: flex;
     justify-content: space-around;
-    gap: 2em;
+    gap: 6em;
     margin-bottom: 2em;
 }
 
@@ -21,10 +21,15 @@
 }
 
 @media (min-width: 768px) {
+    .lupa_span,
+    .input_span{
+        display: none;
+    }
 
     .cabecalho {
         padding: 2em;
         margin-bottom: 0;
+        gap: 2em;
     }
 
     .cabecalho .container {

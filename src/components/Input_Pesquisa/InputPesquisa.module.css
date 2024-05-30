@@ -9,7 +9,12 @@
     background-color: var(--Blue-dark);
 }
 
+.input_flutuante {
+    width: 70%;
+}
+
 @media (min-width: 768px) {
+
     .pesquisa {
         margin: 0;
         display: block;

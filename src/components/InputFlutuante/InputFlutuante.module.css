@@ -1,0 +1,14 @@
+.input_span_code_edition {
+    margin-bottom: 2.4em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .8em;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .input_span_code_edition {
+        display: none;
+    }
+}

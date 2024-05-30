@@ -9,7 +9,7 @@ const MenuFlutuante = () => {
     const { click } = useContext(CodigoContext);
 
     return (<>
-        {!click ? <span className={styles.menu_span}>
+        {click ? <span className={styles.menu_span}>
             <CampoLista />
             <div className={styles.container_usuario}>
                 <Imagem src={fotoPerfil} alt='foto perfil' lg='postagem' altura="25px" comprimento="35px" />
