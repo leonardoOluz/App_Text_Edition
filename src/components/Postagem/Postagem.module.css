@@ -31,7 +31,7 @@
     width: 85%;
 }
 
-.postagem p{
+.postagem p {
     font-size: 16px;
     font-weight: 100;
     line-height: 24px;
@@ -71,6 +71,16 @@
     gap: 2.5em;
 }
 
+/* Hidden para descricao */
+.descricao {
+    display: none;
+}
+
+/* Hover de descrição */
+.postagem:hover .descricao {
+    display: flex;
+}
+
 /* Designer para o coração */
 .heart {
     cursor: pointer;
@@ -78,20 +88,22 @@
 }
 
 @media (min-width: 768px) {
-    .postagem{
+    .postagem {
         width: 100%;
         max-width: 704px;
     }
 }
 
 @media (min-width: 1024px) {
-    .postagem{
+    .postagem {
         max-width: 520px;
-    } 
-    .postagem .border{
+    }
+
+    .postagem .border {
         height: 282px;
-    }  
-    .postagem .border .card_code{
+    }
+
+    .postagem .border .card_code {
         height: 67%;
         margin: 1em;
     }
