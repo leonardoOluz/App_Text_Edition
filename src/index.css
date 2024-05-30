@@ -29,6 +29,12 @@ body {
     line-height: 24px;
 }
 
+/* Esconder barra lateral usando cor de fundo e width 0px */
+::-webkit-scrollbar {
+    background-color: var(--blue-dark-fund);
+    width: 0;
+}
+
 /* Inputs e btn dos formularios */
 .input_padrao,
 .btn_padrao {
