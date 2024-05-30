@@ -1,10 +1,14 @@
+import { useContext } from "react";
+import { FaHeart } from "react-icons/fa";
 import styles from "./Postagem.module.css";
-import iconCoracao from "./icon_coracao.png";
 import iconMensagem from "./icon_mensagem.png";
 import fotoPerfil from "@/../assets/LeoLuz.jpg"
 import Imagem from "components/Cabecalho/Imagem";
+import { CodigoContext } from "context/CodigoContexto";
 
 const Postagem = () => {
+    const { coracao, setCoracao } = useContext(CodigoContext);
+
     return (<div className={styles.postagem}>
         <div className={styles.border}>
             <p className={styles.card_code} />
@@ -18,16 +22,19 @@ const Postagem = () => {
         <p>Essa é a descrição do meu projeto.</p>
         <div className={styles.descricao}>
             <div className={`container_postagem`}>
-                <div className={`container_postagem`}>
+                <div className={`perfil`}>
                     <img src={iconMensagem} alt="icone de mensagem" />
                     <span>9</span>
                 </div>
-                <div className={`container_postagem`} >
-                    <img src={iconCoracao} alt=" icone de coração de curtida" />
+                <div className={`perfil ${styles.heart}`}  onClick={() => setCoracao((prev) => prev = !prev)}>
+                    {coracao
+                        ? <FaHeart size={20} />
+                        : <FaHeart color="#f65151" size={20} />
+                    }
                     <span>7</span>
                 </div>
             </div>
-            <div className={`container_postagem`} >
+            <div className={`perfil`} >
                 <Imagem src={fotoPerfil} alt='foto perfil' lg="postagem" altura="25px" comprimento="35px" />
                 <p className={styles.perfil}>@Leo</p>
             </div>

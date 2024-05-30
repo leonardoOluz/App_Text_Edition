@@ -73,6 +73,23 @@ body {
     color: var(--branco);
 }
 
+/* Desiner do perfil */
+.perfil {
+    display: flex;
+    padding: .5em;
+    height: 35px;
+    align-items: center;
+    gap: .5em;
+    border-radius: 8px;
+    transition: 550ms;
+}
+
+/* Hover do perfil */
+.perfil:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* iframe redirecionamento do editor */
 iframe#webpack-dev-server-client-overlay {
     display: none !important
 }

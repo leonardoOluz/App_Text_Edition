@@ -20,7 +20,8 @@
 
 @media (min-width: 768px) {
     .menu_span{
-        top: 12%;
+        top: 18%;
+        right: 3%;
     }
 }
 @media (min-width: 1024px) {

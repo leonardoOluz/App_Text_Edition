@@ -16,7 +16,7 @@
     align-self: center;
 }
 
-.perfil {
+.perfil_lg_none {
     display: none;
 }
 
@@ -39,6 +39,10 @@
 }
 
 @media (min-width: 1024px) {
+    .perfil_lg_none {
+        display: flex;
+    }
+
     .menu_hamburguer {
         display: none;
     }
@@ -47,20 +51,6 @@
         justify-content: space-between;
         width: auto;
         align-items: center;
-    }
-
-    .perfil {
-        display: flex;
-        padding: .5em;
-        height: 35px;
-        align-items: center;
-        gap: .5em;
-        border-radius: 8px;
-        transition: 550ms;
-    }
-
-    .perfil:hover {
-        background-color: rgba(255, 255, 255, 0.1);
     }
 
     p {

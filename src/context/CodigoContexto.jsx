@@ -21,6 +21,7 @@ export const CodigoProvider = ({ children }) => {
     const [cor, setCor] = useState("#5081FB");
     const [click, setClick] = useState(false);
     const [clickPesquisa, setClickPesquisa] = useState(false)
+    const [coracao, setCoracao] = useState(false)
     const [windowSize, setWindowSize] = useState([
         window.innerWidth,
         window.innerHeight
@@ -57,7 +58,9 @@ export const CodigoProvider = ({ children }) => {
             clickPesquisa,
             setClickPesquisa,
             windowSize,
-            setWindowSize
+            setWindowSize,
+            coracao, 
+            setCoracao
         }}>
             {children}
         </CodigoContext.Provider>
