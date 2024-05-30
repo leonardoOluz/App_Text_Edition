@@ -29,7 +29,7 @@ const Cabecalho = () => {
         <>
             {clickPesquisa
                 ? <></>
-                : <header className={styles.cabecalho}>
+                : <header className={styles.cabecalho} >
                     <div className={styles.logo}>
                         <Imagem src={logo} alt='logo alura' altura='35px' />
                     </div>

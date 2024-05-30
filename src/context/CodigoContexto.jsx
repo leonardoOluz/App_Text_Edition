@@ -32,8 +32,7 @@ export const CodigoProvider = ({ children }) => {
         }
         window.addEventListener("resize", windowSizeHandler)
 
-        setClickPesquisa((prev) => windowSize[0] > 768 ? prev = false : prev)
-        console.log(windowSize[0], clickPesquisa)
+        setClickPesquisa((prev) => windowSize[0] > 767 ? prev = false : prev)
 
         return () => {
             window.removeEventListener("resize", windowSizeHandler)

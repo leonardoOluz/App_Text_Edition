@@ -21,8 +21,9 @@
 }
 
 @media (min-width: 768px) {
+
     .lupa_span,
-    .input_span{
+    .input_span {
         display: none;
     }
 

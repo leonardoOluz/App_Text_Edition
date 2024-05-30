@@ -1,10 +1,14 @@
-import ConteudoDaSecao from "components/ConteudoDaSecao";
-import { useLocation } from "react-router-dom";
+import Postagem from "components/Postagem";
+import Secao from "components/Secao";
 
 const Comunidade = () => {
-    let location = useLocation();
     return (<main>
-        <ConteudoDaSecao to={location.pathname} />
+        <Secao>
+            <Postagem/>
+            <Postagem/>
+            <Postagem/>
+            <Postagem/>
+        </Secao>
     </main>)
 };
 

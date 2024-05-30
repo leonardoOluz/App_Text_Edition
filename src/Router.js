@@ -1,6 +1,6 @@
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import EditorDoCodigo from 'pages/EditorDoCodigo';
+import Home from 'pages/Home';
 import Comunidade from 'pages/Comunidade';
 import PaginaBase from 'pages/PaginaBase';
 import PaginaNaoEncontrada from 'pages/PaginaNaoEncontrada';
@@ -11,7 +11,7 @@ function AppRoutes() {
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<PaginaBase/>} >
-          <Route index element={<EditorDoCodigo />} />
+          <Route index element={<Home />} />
           <Route path='/comunidade' element={<Comunidade />} />
           <Route path='*' element={<PaginaNaoEncontrada />} />
         </Route>
