@@ -1,27 +1,20 @@
-import { createContext, useEffect, useState } from "react"
+import { createContext, useEffect, useState } from "react";
+import user from "json/usuario.json";
+import code from "json/postagem.json";
+
 export const CodigoContext = createContext();
 CodigoContext.displayName = "Codigo";
 
 export const CodigoProvider = ({ children }) => {
-    const postCode = [
-        {
-            nome: "@Leo",
-            foto: "",
-            titulo: "",
-            descricao: "",
-            linguagem: "",
-            codigo: "",
-            cor: "",
-        }
-    ];
-    const [postarCode, setPostarCode] = useState(postCode);
+    const [poster, setPoster] = useState(code.postagem);
+    const [usuarios, setUsuarios] = useState(user.editorCode);
     const [codigo, setCodigo] = useState("");
     const [linguagem, setLinguagem] = useState("javascript");
     const [show, setShow] = useState(false);
     const [cor, setCor] = useState("#5081FB");
     const [click, setClick] = useState(false);
-    const [clickPesquisa, setClickPesquisa] = useState(false)
-    const [coracao, setCoracao] = useState(false)
+    const [clickPesquisa, setClickPesquisa] = useState(false);
+    const [coracao, setCoracao] = useState(false);
     const [windowSize, setWindowSize] = useState([
         window.innerWidth,
         window.innerHeight
@@ -43,12 +36,14 @@ export const CodigoProvider = ({ children }) => {
 
     return (
         <CodigoContext.Provider value={{
+            poster, 
+            setPoster,
+            usuarios, 
+            setUsuarios,
             codigo,
             setCodigo,
             linguagem,
             setLinguagem,
-            postarCode,
-            setPostarCode,
             show,
             setShow,
             cor,
