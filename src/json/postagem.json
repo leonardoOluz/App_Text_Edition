@@ -1,0 +1,90 @@
+{
+    "postagem": [
+        {
+            "id": 1,
+            "id_usuario": 1,
+            "titulo": "Codigo HTML",
+            "descricao": "Tag HTML cabeçalho",
+            "linguagem": "html",
+            "codigo": "<html><header></header></html>",
+            "cor": "#FFBD2E",
+            "curtidas": {
+                "id_usuario": []
+            },
+            "mensagem": [
+                {
+                    "id": 1,
+                    "id_usuario": 2,
+                    "msg": "Codigo bacana! facilita a multiplicação"
+                },
+                {
+                    "id": 2,
+                    "id_usuario": 2,
+                    "msg": "Codigo bacana! facilita a multiplicação"
+                },
+                {
+                    "id": 3,
+                    "id_usuario": 1,
+                    "msg": "Codigo bacana! facilita a multiplicação"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "id_usuario": 1,
+            "titulo": "Codigo HTML",
+            "descricao": "Tag HTML cabeçalho",
+            "linguagem": "html",
+            "codigo": "<html><header></header></html>",
+            "cor": "#26C934",
+            "curtidas": {
+                "id_usuario": [2]
+            },
+            "mensagem": [
+                {
+                    "id": 1,
+                    "id_usuario": 2,
+                    "msg": "Codigo bacana! facilita a multiplicação"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "id_usuario": 2,
+            "titulo": "Usando Css no Body",
+            "descricao": "Css com backgroud font-size ",
+            "linguagem": "css",
+            "codigo": "body { background: #FFBD2E; font-size: 16px; } ",
+            "cor": "#FFFFFF",
+            "curtidas": {
+                "id_usuario": [1]
+            },
+            "mensagem": [
+                {
+                    "id": 1,
+                    "id_usuario": 1,
+                    "msg": "Codigo bacana! facilita a multiplicação"
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "id_usuario": 2,
+            "titulo": "Codigo JavaScript",
+            "descricao": "Função que recebe dois argumentos e retorno o valor multiplicado",
+            "linguagem": "javascript",
+            "codigo": "function multiplicar(x, y){ return x * y }",
+            "cor": "#FFBD2E",
+            "curtidas": {
+                "id_usuario": [1]
+            },
+            "mensagem": [
+                {
+                    "id": 1,
+                    "id_usuario": 1,
+                    "msg": "Codigo bacana! facilita a multiplicação"
+                }
+            ]
+        }
+    ]
+}

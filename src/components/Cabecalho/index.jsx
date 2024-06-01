@@ -3,20 +3,23 @@ import Imagem from './Imagem';
 import logo from './image/Logo.png'
 import { IoClose } from "react-icons/io5";
 import InputPesquisa from '../Input_Pesquisa';
-import fotoPerfil from '@/../assets/LeoLuz.jpg'
 import { useContext } from 'react';
 import { CodigoContext } from 'context/CodigoContexto';
 import { LuMenu } from "react-icons/lu";
 import { FaSearch } from "react-icons/fa";
 
 const Cabecalho = () => {
+    
     const {
         click,
         setClick,
         clickPesquisa,
-        setClickPesquisa
+        setClickPesquisa,
+        usuarios
     } = useContext(CodigoContext);
 
+    const foto = require(`assets/${usuarios[1].foto}.jpg`)
+    
     function clickMenu() {
         setClick((prev) => prev = !prev);
     }
@@ -46,8 +49,8 @@ const Cabecalho = () => {
                         }
                     </div>
                     <div className={`${styles.perfil_lg_none} perfil`}>
-                        <Imagem src={fotoPerfil} alt='foto perfil' lg='foto' altura="25px" comprimento="35px" />
-                        <p>@Leo</p>
+                        <Imagem src={foto} alt='foto perfil' lg='foto' altura="25px" comprimento="35px" />
+                        <p>{usuarios[1].nome}</p>
                     </div>
                 </header>
             }
