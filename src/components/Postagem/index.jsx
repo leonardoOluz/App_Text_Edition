@@ -3,7 +3,7 @@ import styles from "./Postagem.module.css";
 import iconMensagem from "./icon_mensagem.png";
 import Imagem from "components/Cabecalho/Imagem";
 
-const Postagem = ({ poster, usuario, like }) => {
+const Postagem = ({ poster, usuario, like, logado }) => {
 
     const foto = require(`assets/${usuario.foto}.jpg`);
 
@@ -25,7 +25,7 @@ const Postagem = ({ poster, usuario, like }) => {
                     <span>{poster.mensagem.length}</span>
                 </div>
                 <div className={`perfil ${styles.heart}`} >
-                    {poster.curtidas.id_usuario.length > 0
+                    {poster.curtidas.id_usuario.length > 0 && poster.curtidas.id_usuario.includes(logado)
                         ? <FaHeart onClick={() => like(poster.id)} color="#f65151" size={20} />
                         : <FaHeart onClick={() => like(poster.id)} size={20} />
                     }
