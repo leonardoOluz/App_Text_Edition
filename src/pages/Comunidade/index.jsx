@@ -26,6 +26,7 @@ const Comunidade = () => {
                     poster={postado}
                     like={liked}
                     usuario={usuarios.find((usuario) => usuario.id === postado.id_usuario)}
+                    logado={usuarios[1].id}
                     key={postado.id}
                 />)
             }
