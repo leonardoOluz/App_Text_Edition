@@ -6,16 +6,16 @@
     transition: 800ms;
 }
 
-.btn:hover {
+.btn_hover:hover {
     background-color: var(--Blue-200);
 }
 
-.btn:focus {
+.btn_hover:focus {
     animation: deslizar 200ms;
     width: 50%;
 }
 
-.btn:active {
+.btn_hover:active {
     background-color: var(--Blue-200);
     border: 4px solid var(--Blue-300);
 }
@@ -32,10 +32,6 @@
 }
 
 @media (min-width: 768px) {
-    .btn:focus {
-        /* width: 20%; */
-    }
-
     @keyframes deslizar {
         from {
             width: 100%;
@@ -48,10 +44,6 @@
 }
 
 @media (min-width: 1024px) {
-    .btn:focus {
-        /* width: 50%; */
-    }
-
     @keyframes deslizar {
         from {
             width: 100%;

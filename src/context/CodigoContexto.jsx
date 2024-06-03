@@ -10,11 +10,12 @@ export const CodigoProvider = ({ children }) => {
     const [usuarios, setUsuarios] = useState(user.editorCode);
     const [codigo, setCodigo] = useState("");
     const [linguagem, setLinguagem] = useState("javascript");
-    const [show, setShow] = useState(false);
     const [cor, setCor] = useState("#5081FB");
+    const [titulo, setTitulo] = useState("");
+    const [descricao, setDescricao] = useState("");
+    const [show, setShow] = useState(false);
     const [click, setClick] = useState(false);
     const [clickPesquisa, setClickPesquisa] = useState(false);
-    const [coracao, setCoracao] = useState(false);
     const [windowSize, setWindowSize] = useState([
         window.innerWidth,
         window.innerHeight
@@ -36,9 +37,9 @@ export const CodigoProvider = ({ children }) => {
 
     return (
         <CodigoContext.Provider value={{
-            poster, 
+            poster,
             setPoster,
-            usuarios, 
+            usuarios,
             setUsuarios,
             codigo,
             setCodigo,
@@ -54,8 +55,10 @@ export const CodigoProvider = ({ children }) => {
             setClickPesquisa,
             windowSize,
             setWindowSize,
-            coracao, 
-            setCoracao
+            titulo,
+            setTitulo,
+            descricao, 
+            setDescricao
         }}>
             {children}
         </CodigoContext.Provider>

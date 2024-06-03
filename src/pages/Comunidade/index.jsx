@@ -9,9 +9,9 @@ const Comunidade = () => {
     function liked(id) {
         setPoster(poster.map((item) => {
 
-            if (item.id === id && !item.curtidas.id_usuario.includes(Number(usuarios[1].id))) {
+            if (item.id === id && !item.curtidas.id_usuario.includes(usuarios[1].id)) {
                 item.curtidas.id_usuario.push(usuarios[1].id);
-            } else if (item.id === id && item.curtidas.id_usuario.includes(Number(usuarios[1].id))) {
+            } else if (item.id === id && item.curtidas.id_usuario.includes(usuarios[1].id)) {
                 let newItem = item.curtidas.id_usuario.filter(id => id !== usuarios[1].id)
                 item.curtidas.id_usuario = newItem;
             }

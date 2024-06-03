@@ -8,7 +8,7 @@ const TextEditor = () => {
     const { codigo, setCodigo, linguagem, show } = useContext(CodigoContext)
 
     function handleEditorChange(valor, evento) {
-        setCodigo(valor)
+        setCodigo((prev) => prev = valor)
     }
 
     return (
