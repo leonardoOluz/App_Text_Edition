@@ -10,7 +10,7 @@ const Postagem = ({ poster, usuario, like, logado }) => {
     const foto = require(`assets/${usuario.foto}.jpg`);
 
     return (<div className={styles.postagem}>
-        <Link to={`/editar/${poster.id}`} className={styles.border} style={{ backgroundColor: `${poster.cor}` }}>
+        <Link to={logado === poster.id_usuario && `/editar/${poster.id}`} className={styles.border} style={{ backgroundColor: `${poster.cor}` }}>
             <SyntaxHighlighter
                 style={atomOneDark}
                 customStyle={{
