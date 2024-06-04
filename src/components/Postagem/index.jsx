@@ -4,12 +4,13 @@ import iconMensagem from "./icon_mensagem.png";
 import Imagem from "components/Cabecalho/Imagem";
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { atomOneDark } from 'react-syntax-highlighter/dist/cjs/styles/hljs/'
+import { Link } from "react-router-dom";
 const Postagem = ({ poster, usuario, like, logado }) => {
 
     const foto = require(`assets/${usuario.foto}.jpg`);
 
     return (<div className={styles.postagem}>
-        <div className={styles.border} style={{ backgroundColor: `${poster.cor}` }}>
+        <Link to={`/editar/${poster.id}`} className={styles.border} style={{ backgroundColor: `${poster.cor}` }}>
             <SyntaxHighlighter
                 style={atomOneDark}
                 customStyle={{
@@ -26,7 +27,7 @@ const Postagem = ({ poster, usuario, like, logado }) => {
                 <div className={styles.circulos} style={{ backgroundColor: '#FFBD2E' }} />
                 <div className={styles.circulos} style={{ backgroundColor: '#27C93F' }} />
             </div>
-        </div>
+        </Link>
         <h2>{poster.titulo}</h2>
         <p>{poster.descricao}</p>
         <div className={styles.descricao}>
