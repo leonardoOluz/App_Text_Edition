@@ -3,7 +3,7 @@ import { useContext } from "react";
 import uuid from "react-native-uuid";
 
 export const Postagem = () => {
-    const {setPoster, poster, usuarios, titulo, descricao, linguagem, codigo, cor} = useContext(CodigoContext);
+    const { setPoster, poster, usuarios, titulo, descricao, linguagem, codigo, cor } = useContext(CodigoContext);
 
     const salveNewPoster = () => {
         setPoster([...poster, {
@@ -20,8 +20,7 @@ export const Postagem = () => {
             mensagem: []
         }])
     }
-
-    return{
+    return {
         salveNewPoster,
     }
 
