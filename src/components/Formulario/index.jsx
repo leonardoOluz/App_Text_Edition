@@ -2,29 +2,24 @@ import styles from './Formulario.module.css';
 import InputPesquisa from 'components/Input_Pesquisa';
 import Option from './Option';
 import Botao from 'components/Botao';
-import uuid from "react-native-uuid"
 import EditorCodigo from 'components/EditorCodigo';
 import { useContext, useState } from 'react';
 import { CodigoContext } from 'context/CodigoContexto';
 import { Navigate } from 'react-router-dom';
+import { Postagem } from "Hooks/Postagem"
 
 const Formulario = () => {
     const [toggle, setToggle] = useState(false)
     const [hover, setHover] = useState(false)
+    const { salveNewPoster } = Postagem()
 
     const {
         setLinguagem,
         cor,
         setCor,
-        setPoster,
-        poster,
-        usuarios,
         setCodigo,
-        linguagem,
-        codigo,
         titulo,
         setTitulo,
-        descricao,
         setDescricao
     } = useContext(CodigoContext);
 
@@ -36,28 +31,15 @@ const Formulario = () => {
         e.preventDefault()
 
         if (titulo) {
-            setHover(true)
-            setPoster([...poster, {
-                id: uuid.v4(),
-                id_usuario: usuarios[1].id,
-                titulo: titulo,
-                descricao: descricao,
-                linguagem: linguagem,
-                codigo: codigo,
-                cor: cor,
-                curtidas: {
-                    id_usuario: []
-                },
-                mensagem: []
-            }])
+            setHover(true);
+            salveNewPoster();
             setTimeout(() => {
                 setLinguagem("");
                 setCor("#ffffff");
                 setTitulo("");
                 setDescricao("");
                 setCodigo("");
-                console.log(toggle)
-                setToggle(true)
+                setToggle(true);
             }, 300)
         } else {
             alert("Necessario preenchimento dos campos obrigatorio")
