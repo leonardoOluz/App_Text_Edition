@@ -8,6 +8,7 @@ CodigoContext.displayName = "Codigo";
 export const CodigoProvider = ({ children }) => {
     const [poster, setPoster] = useState(code.postagem);
     const [usuarios, setUsuarios] = useState(user.editorCode);
+    const [post, setPost] = useState({});
     const [codigo, setCodigo] = useState("");
     const [linguagem, setLinguagem] = useState("javascript");
     const [cor, setCor] = useState("#5081FB");
@@ -20,6 +21,7 @@ export const CodigoProvider = ({ children }) => {
         window.innerWidth,
         window.innerHeight
     ])
+
     useEffect(() => {
 
         const windowSizeHandler = () => {
@@ -57,8 +59,10 @@ export const CodigoProvider = ({ children }) => {
             setWindowSize,
             titulo,
             setTitulo,
-            descricao, 
-            setDescricao
+            descricao,
+            setDescricao,
+            post,
+            setPost
         }}>
             {children}
         </CodigoContext.Provider>

@@ -11,17 +11,26 @@ import { Postagem } from "Hooks/Postagem"
 const Formulario = () => {
     const [toggle, setToggle] = useState(false)
     const [hover, setHover] = useState(false)
-    const { salveNewPoster } = Postagem()
+    const { salveNewPoster, zerarVariaveis } = Postagem();
 
     const {
         setLinguagem,
+        linguagem,
         cor,
         setCor,
-        setCodigo,
         titulo,
         setTitulo,
-        setDescricao
+        setDescricao,
+        descricao
     } = useContext(CodigoContext);
+
+    function configTimeOut() {
+        setTimeout(() => {
+            zerarVariaveis();
+            setToggle(true);
+        }, 300)
+
+    }
 
     function optionSelecionado(e) {
         setLinguagem((prev) => prev = e.target.value)
@@ -29,22 +38,13 @@ const Formulario = () => {
 
     function salvar(e) {
         e.preventDefault()
-
         if (titulo) {
             setHover(true);
             salveNewPoster();
-            setTimeout(() => {
-                setLinguagem("");
-                setCor("#ffffff");
-                setTitulo("");
-                setDescricao("");
-                setCodigo("");
-                setToggle(true);
-            }, 300)
+            configTimeOut();
         } else {
             alert("Necessario preenchimento dos campos obrigatorio")
         }
-
     }
 
     return (
@@ -52,11 +52,11 @@ const Formulario = () => {
             <EditorCodigo />
             <div className={styles.container_formulario}>
                 <label className={styles.label_form}>Seu Projeto</label>
-                <InputPesquisa placText='Nome do seu projeto' text='text' stilos="" change={setTitulo} />
-                <textarea onChange={(e) => setDescricao(e.target.value)} className='input_padrao' style={{ width: 'auto', padding: '1em', resize: 'none' }} placeholder='Descrição do seu projeto' />
+                <InputPesquisa placText='Nome do seu projeto' text='text' stilos="" change={setTitulo} valor={titulo} />
+                <textarea value={descricao} onChange={(e) => setDescricao(e.target.value)} className='input_padrao' style={{ width: 'auto', padding: '1em', resize: 'none' }} placeholder='Descrição do seu projeto' />
                 <label>Personalização</label>
                 <div className={styles.container}>
-                    <select onChange={optionSelecionado} className={`input_padrao ${styles.seletor} `} style={{ width: '100%' }}>
+                    <select value={linguagem} onChange={optionSelecionado} className={`input_padrao ${styles.seletor} `} style={{ width: '100%' }}>
                         <Option childrean={'javascript'} valores={'javascript'} />
                         <Option childrean={'html'} valores={'html'} />
                         <Option childrean={'css'} valores={'css'} />

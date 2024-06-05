@@ -1,8 +1,8 @@
 {
     "postagem": [
         {
-            "id": 1,
-            "id_usuario": 1,
+            "id": "f3533376-de9a-42a9-8258-ce3bfd2a6ec8",
+            "id_usuario": "cffc4a6c-e396-4f9d-8e3d-aa9e44643d5b",
             "titulo": "Codigo HTML",
             "descricao": "Tag HTML cabeçalho",
             "linguagem": "html",
@@ -30,8 +30,8 @@
             ]
         },
         {
-            "id": 2,
-            "id_usuario": 1,
+            "id": "734cb939-ef4e-4bd4-aaa9-105daeb97046",
+            "id_usuario": "cffc4a6c-e396-4f9d-8e3d-aa9e44643d5b",
             "titulo": "Codigo HTML",
             "descricao": "Tag HTML cabeçalho",
             "linguagem": "html",
@@ -49,8 +49,8 @@
             ]
         },
         {
-            "id": 3,
-            "id_usuario": 2,
+            "id": "5c0914ab-abde-44b3-9a63-3bd5ffe1e133",
+            "id_usuario": "62589d9c-44a1-4ef8-8eab-1eca61c3aff1",
             "titulo": "Usando Css no Body",
             "descricao": "Css com backgroud font-size ",
             "linguagem": "css",
@@ -68,8 +68,8 @@
             ]
         },
         {
-            "id": 4,
-            "id_usuario": 2,
+            "id": "d9beb0e6-52c9-4e25-a0cf-9df6eaa6f1a7",
+            "id_usuario": "62589d9c-44a1-4ef8-8eab-1eca61c3aff1",
             "titulo": "Codigo JavaScript",
             "descricao": "Função que recebe dois argumentos e retorno o valor multiplicado",
             "linguagem": "javascript",
