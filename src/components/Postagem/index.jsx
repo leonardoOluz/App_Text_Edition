@@ -8,9 +8,12 @@ import { Link } from "react-router-dom";
 const Postagem = ({ poster, usuario, like, logado }) => {
 
     const foto = require(`assets/${usuario.foto}.jpg`);
+    const handleClick = () => {
+        console.log(logado, poster.id)
+    }
 
     return (<div className={styles.postagem}>
-        <Link to={logado === poster.id_usuario && `/editar/${poster.id}`} className={styles.border} style={{ backgroundColor: `${poster.cor}` }}>
+        <Link onClick={logado === poster.id_usuario && handleClick} to={logado === poster.id_usuario && `/editar/${poster.id}`} className={styles.border} style={{ backgroundColor: `${poster.cor}` }}>
             <SyntaxHighlighter
                 style={atomOneDark}
                 customStyle={{
