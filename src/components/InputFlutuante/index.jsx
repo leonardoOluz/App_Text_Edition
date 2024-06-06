@@ -1,5 +1,5 @@
 import InputPesquisa from "components/Input_Pesquisa";
-import { CodigoContext } from "context/CodigoContexto";
+import { CodigoContext } from "contexts/CodigoContexto";
 import { useContext } from "react";
 import { IoClose } from "react-icons/io5";
 import styles from "./InputFlutuante.module.css";

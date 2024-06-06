@@ -3,7 +3,7 @@ import ContainerDisplay from "components/ContainerDisplay";
 import InputFlutuante from "components/InputFlutuante";
 import MenuFlutuante from "components/MenuFlutuante";
 import MenuNavegacao from "components/Menu_Navegacao";
-import { CodigoProvider } from "context/CodigoContexto";
+import { CodigoProvider } from "contexts/CodigoContexto";
 import { Outlet } from "react-router-dom";
 
 const PaginaBase = () => {

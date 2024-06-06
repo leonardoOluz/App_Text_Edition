@@ -8,15 +8,17 @@ CodigoContext.displayName = "Codigo";
 export const CodigoProvider = ({ children }) => {
     const [poster, setPoster] = useState(code.postagem);
     const [usuarios, setUsuarios] = useState(user.editorCode);
-    const [post, setPost] = useState({});
-    const [codigo, setCodigo] = useState("");
-    const [linguagem, setLinguagem] = useState("javascript");
-    const [cor, setCor] = useState("#5081FB");
-    const [titulo, setTitulo] = useState("");
-    const [descricao, setDescricao] = useState("");
     const [show, setShow] = useState(false);
     const [click, setClick] = useState(false);
     const [clickPesquisa, setClickPesquisa] = useState(false);
+
+    const [codigo, setCodigo] = useState();
+    const [linguagem, setLinguagem] = useState("javascript");
+    const [cor, setCor] = useState("#5081FB");
+    const [titulo, setTitulo] = useState();
+    const [descricao, setDescricao] = useState();
+    const [id_post, setId_post] = useState();
+
     const [windowSize, setWindowSize] = useState([
         window.innerWidth,
         window.innerHeight
@@ -61,8 +63,8 @@ export const CodigoProvider = ({ children }) => {
             setTitulo,
             descricao,
             setDescricao,
-            post,
-            setPost
+            id_post, 
+            setId_post
         }}>
             {children}
         </CodigoContext.Provider>

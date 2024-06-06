@@ -4,7 +4,7 @@ import logo from './image/Logo.png'
 import { IoClose } from "react-icons/io5";
 import InputPesquisa from '../Input_Pesquisa';
 import { useContext } from 'react';
-import { CodigoContext } from 'context/CodigoContexto';
+import { CodigoContext } from 'contexts/CodigoContexto';
 import { LuMenu } from "react-icons/lu";
 import { FaSearch } from "react-icons/fa";
 

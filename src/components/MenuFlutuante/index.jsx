@@ -1,6 +1,6 @@
 import Imagem from "components/Cabecalho/Imagem";
 import CampoLista from "components/Campo_Lista";
-import { CodigoContext } from "context/CodigoContexto";
+import { CodigoContext } from "contexts/CodigoContexto";
 import { useContext } from "react";
 import fotoPerfil from '@/../assets/LeoLuz.jpg'
 import styles from "./MenuFlutuante.module.css"
