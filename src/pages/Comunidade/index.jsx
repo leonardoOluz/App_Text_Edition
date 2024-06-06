@@ -1,10 +1,11 @@
 import Postagem from "components/Postagem";
 import Secao from "components/Secao";
-import { CodigoContext } from "context/CodigoContexto";
+import { CodigoContext } from "contexts/CodigoContexto";
 import { useContext } from "react";
+// import poster from "json/postagem.json"
 
 const Comunidade = () => {
-    const { poster, setPoster, usuarios } = useContext(CodigoContext);
+    const {poster,  setPoster, usuarios } = useContext(CodigoContext);
 
     function liked(id) {
         setPoster(poster.map((item) => {

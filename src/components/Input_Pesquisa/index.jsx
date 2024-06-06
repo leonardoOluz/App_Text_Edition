@@ -1,14 +1,12 @@
 import styles from './InputPesquisa.module.css';
 
-const InputPesquisa = ({ text = 'text', placText, stilos = "", valor, change }) => {
-    function changed(e) {
-        change((prev) => prev = e.target.value)
-    };
+const InputPesquisa = ({ nameInput, text = 'text', placText, stilos = "", valor, change }) => {
     return (
         <input
+            name={nameInput}
             type={text}
             value={valor}
-            onChange={changed}
+            onChange={change}
             placeholder={placText}
             className={
                 stilos === "color"
