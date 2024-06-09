@@ -6,7 +6,7 @@ import { CodigoContext } from "contexts/CodigoContexto";
 const TextEditor = ({ changed, valor }) => {
     const { linguagem, show } = useContext(CodigoContext)
     return (
-        <Editor
+        <Editor  
             className={styles.editor}
             value={valor}
             language={show ? linguagem : ""}
