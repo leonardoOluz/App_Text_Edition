@@ -37,14 +37,14 @@ const Postagem = ({ poster, usuario, like, logado }) => {
                 break;
         }
     }
-    
+
     return (
         <div className={styles.postagem}>
-            <Link ref={ref} id="imagem-png"
+            <Link
+                ref={ref}
                 onClick={logado === poster.id_usuario && handleClick}
                 to={logado === poster.id_usuario && `/editar/${poster.id}`}
-                className={styles.border} style={{ backgroundColor: `${poster.cor}` }}
-            >
+                className={styles.border} style={{ backgroundColor: `${poster.cor}` }}            >
                 <SyntaxHighlighter
                     style={atomOneDark}
                     customStyle={{
@@ -81,9 +81,9 @@ const Postagem = ({ poster, usuario, like, logado }) => {
                 <div className={styles.download}>
                     <label>Selecione</label>
                     <select className={`btn_padrao`} onChange={e => setNomeDownload(e.target.value)}>
-                        <option defaultChecked value="Png">Png</option>
-                        <option value="Jpeg">Jpeg</option>
-                        <option value="Svg">Svg</option>
+                        <option defaultChecked value="Png">PNG</option>
+                        <option value="Jpeg">JPEG</option>
+                        <option value="Svg">SVG</option>
                     </select>
                     <button className={`btn_padrao`} onClick={onBtnClickPng}>{`Download`}</button>
                 </div>

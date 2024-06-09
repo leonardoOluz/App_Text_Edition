@@ -123,6 +123,7 @@
     }
     .perfil_post {
         flex-wrap: nowrap;
+        gap: 1em;
     }
 }
 

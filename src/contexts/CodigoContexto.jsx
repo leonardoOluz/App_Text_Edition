@@ -12,12 +12,12 @@ export const CodigoProvider = ({ children }) => {
     const [click, setClick] = useState(false);
     const [clickPesquisa, setClickPesquisa] = useState(false);
 
-    const [codigo, setCodigo] = useState();
-    const [linguagem, setLinguagem] = useState("javascript");
+    const [codigo, setCodigo] = useState("");
+    const [linguagem, setLinguagem] = useState("");
     const [cor, setCor] = useState("#5081FB");
     const [titulo, setTitulo] = useState();
-    const [descricao, setDescricao] = useState();
-    const [id_post, setId_post] = useState();
+    const [descricao, setDescricao] = useState("");
+    const [id_post, setId_post] = useState("");
 
     const [windowSize, setWindowSize] = useState([
         window.innerWidth,
