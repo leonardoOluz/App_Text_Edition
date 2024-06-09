@@ -37,9 +37,7 @@ const Postagem = ({ poster, usuario, like, logado }) => {
                 break;
         }
     }
-
-
-
+    
     return (
         <div className={styles.postagem}>
             <Link ref={ref} id="imagem-png"
@@ -87,7 +85,7 @@ const Postagem = ({ poster, usuario, like, logado }) => {
                         <option value="Jpeg">Jpeg</option>
                         <option value="Svg">Svg</option>
                     </select>
-                    <button className={`btn_padrao`} onClick={onBtnClickPng}>{`Download ${nomeDownload}`}</button>
+                    <button className={`btn_padrao`} onClick={onBtnClickPng}>{`Download`}</button>
                 </div>
                 <div className={`perfil ${styles.perfil_post}`} >
                     <Imagem src={foto} alt='foto perfil' lg="postagem" altura="25px" comprimento="35px" />

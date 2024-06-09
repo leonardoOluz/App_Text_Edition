@@ -81,18 +81,16 @@
     padding: 0;
 }
 
+.download button,
 .download select {
     height: auto;
-    margin-top: 0;
+    width: 85px;
+    text-align: center;
+    margin-top: 5px;
     padding: 0;
     outline: none;
-    padding: 0 10px;
+    padding: 2px 0;
     border-radius: 18px;
-}
-
-.download button {
-    margin-top: .2em;
-    height: auto;
 }
 
 /* Hidden para descricao */

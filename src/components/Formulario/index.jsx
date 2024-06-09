@@ -47,11 +47,13 @@ const Formulario = () => {
             <div className={styles.container_formulario}>
                 <label className={styles.label_form}>Seu Projeto</label>
                 <InputPesquisa
+                    check
                     placText='Nome do seu projeto'
                     text='text' stilos=""
                     change={(e) => setTitulo((prev) => prev = e.target.value)}
                     valor={titulo} />
                 <textarea
+                    required
                     value={descricao}
                     onChange={(e) => setDescricao((prev) => prev = e.target.value)}
                     className='input_padrao' style={{ width: 'auto', padding: '1em', resize: 'none' }}
@@ -70,6 +72,7 @@ const Formulario = () => {
                         <Option childrean={'css'} valores={'css'} />
                     </select>
                     <InputPesquisa
+                        check
                         nameInput={"color"}
                         valor={cor}
                         change={(e) => setCor((prev) => prev = e.target.value)}
