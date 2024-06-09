@@ -29,10 +29,16 @@ body {
     line-height: 24px;
 }
 
-/* Esconder barra lateral usando cor de fundo e width 0px */
+/* ediçao de  barra lateral usando cor de fundo e width 10px */
 ::-webkit-scrollbar {
-    background-color: var(--blue-dark-fund);
-    width: 0;
+    background-color: var(--Blue-dark);
+    width: 10px;
+}
+
+/* Edição do thumb com bordas arredondada e cor span */
+::-webkit-scrollbar-thumb {
+    background-color: var(--azul-span);
+    border-radius: 8px;
 }
 
 /* Inputs e btn dos formularios */
