@@ -1,8 +1,8 @@
 import styles from "./Option.module.css";
 
-const Option = ({ childrean, valores }) => {
+const Option = ({ checked = false, children, valores = "" }) => {
     return (
-        <option className={styles.option} value={valores}>{childrean}</option>
+        <option defaultValue={valores} disabled={checked} className={styles.option} value={valores}>{children}</option>
     )
 };
 

@@ -3,6 +3,7 @@ import InputPesquisa from 'components/Input_Pesquisa';
 import Option from './Option';
 import Botao from 'components/Botao';
 import EditorCodigo from 'components/EditorCodigo';
+import jsonLinguagem from "json/linguagem.json";
 import { useContext, useState } from 'react';
 import { CodigoContext } from 'contexts/CodigoContexto';
 import { useNavigate } from 'react-router-dom';
@@ -41,6 +42,8 @@ const Formulario = () => {
         configTimeOut();
     }
 
+    console.log(linguagem)
+
     return (
         <form onSubmit={salvar} className={styles}>
             <EditorCodigo changed={(value) => setCodigo((prev) => prev = value)} valor={codigo} />
@@ -62,14 +65,11 @@ const Formulario = () => {
                 <label>Personalização</label>
                 <div className={styles.container}>
                     <select
-                        value={linguagem}
                         onChange={(e) => setLinguagem((prev) => prev = e.target.value)}
-                        className={`input_padrao ${styles.seletor} `}
+                        className={`input_padrao ${styles.seletor}`}
                         style={{ width: '100%' }}
                     >
-                        <Option childrean={'javascript'} valores={'javascript'} />
-                        <Option childrean={'html'} valores={'html'} />
-                        <Option childrean={'css'} valores={'css'} />
+                        {jsonLinguagem.map(item => <Option key={item.id} children={item.texto} valores={item.linguagem} />)}
                     </select>
                     <InputPesquisa
                         check
