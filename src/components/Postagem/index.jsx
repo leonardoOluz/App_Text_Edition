@@ -6,42 +6,39 @@ import SyntaxHighlighter from 'react-syntax-highlighter';
 import { atomOneDark } from 'react-syntax-highlighter/dist/cjs/styles/hljs/'
 import { Link } from "react-router-dom";
 import { usePost } from "hooks/usePost";
-import { useCallback, useContext, useRef } from "react";
+import { useContext, useState } from "react";
 import { CodigoContext } from "contexts/CodigoContexto";
-import { toPng } from 'html-to-image';
-
+import { useDownload } from "hooks/useDownload";
 
 const Postagem = ({ poster, usuario, like, logado }) => {
     const { editionPost } = usePost();
+    const { clickPng, clickJpeg, clickJSvg, ref } = useDownload();
     const { setId_post } = useContext(CodigoContext);
+    const [nomeDownload, setNomeDownload] = useState("Png")
     const foto = require(`assets/${usuario.foto}.jpg`);
-    const ref = useRef(null)
-
-    const onBtnClick = useCallback(() => {
-
-        if (ref.current === null) {
-            return
-        }
-
-
-
-        toPng(ref.current, { cacheBust: true })
-            .then((dataUrl) => {
-                const link = document.createElement('a')
-                link.download = `my-projeto-code.png`
-                link.href = dataUrl
-                link.click()
-            })
-            .catch((error) => {
-                console.log(error)
-            })
-
-    }, [ref])
 
     const handleClick = () => {
         editionPost(poster.id)
         setId_post(poster.id)
     }
+
+    const onBtnClickPng = () => {
+        switch (nomeDownload) {
+            case "Png":
+                clickPng();
+                break;
+            case "Jpeg":
+                clickJpeg();
+                break;
+            case "Svg":
+                clickJSvg();
+                break;
+            default:
+                break;
+        }
+    }
+
+
 
     return (
         <div className={styles.postagem}>
@@ -83,8 +80,16 @@ const Postagem = ({ poster, usuario, like, logado }) => {
                         <span>{poster.curtidas.id_usuario.length}</span>
                     </div>
                 </div>
-                <button onClick={onBtnClick} style={{ borderRadius: "8px", padding: "10px 15px" }} >Gerador de Imagem</button>
-                <div className={`perfil ${styles.perfil_hover}`} >
+                <div className={styles.download}>
+                    <label>Selecione</label>
+                    <select className={`btn_padrao`} onChange={e => setNomeDownload(e.target.value)}>
+                        <option defaultChecked value="Png">Png</option>
+                        <option value="Jpeg">Jpeg</option>
+                        <option value="Svg">Svg</option>
+                    </select>
+                    <button className={`btn_padrao`} onClick={onBtnClickPng}>{`Download ${nomeDownload}`}</button>
+                </div>
+                <div className={`perfil ${styles.perfil_post}`} >
                     <Imagem src={foto} alt='foto perfil' lg="postagem" altura="25px" comprimento="35px" />
                     <p className={styles.perfil}>{usuario.nome}</p>
                 </div>
