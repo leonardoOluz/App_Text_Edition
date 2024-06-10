@@ -6,12 +6,15 @@ export const CodigoContext = createContext();
 CodigoContext.displayName = "Codigo";
 
 export const CodigoProvider = ({ children }) => {
+    /* VAriavies de estado da api/json */
     const [poster, setPoster] = useState(code.postagem);
     const [usuarios, setUsuarios] = useState(user.editorCode);
+    const [post, setPost] = useState([])
+    /* Variaveis de controle */
     const [show, setShow] = useState(false);
     const [click, setClick] = useState(false);
     const [clickPesquisa, setClickPesquisa] = useState(false);
-
+    /* Variaveis de controle do formulario*/
     const [codigo, setCodigo] = useState("");
     const [linguagem, setLinguagem] = useState("");
     const [cor, setCor] = useState("#5081FB");
@@ -23,6 +26,10 @@ export const CodigoProvider = ({ children }) => {
         window.innerWidth,
         window.innerHeight
     ])
+
+    useEffect(() => {
+        setPost([...poster])
+    },[poster])
 
     useEffect(() => {
 
@@ -63,8 +70,10 @@ export const CodigoProvider = ({ children }) => {
             setTitulo,
             descricao,
             setDescricao,
-            id_post, 
-            setId_post
+            id_post,
+            setId_post,
+            post, 
+            setPost
         }}>
             {children}
         </CodigoContext.Provider>
