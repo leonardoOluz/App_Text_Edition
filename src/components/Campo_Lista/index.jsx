@@ -4,10 +4,10 @@ import logoCode from "./IconCode.png";
 import logoComunidade from "./IconComunidade.png"
 import { usePost } from "hooks/usePost";
 const CampoLista = () => {
-    const { setState } = usePost();
+    const { setState, getPoster } = usePost();
     return (<ul className={styles.ul}>
         <MenuLista handleClick={setState} children='Editor de código' imagem={logoCode} link={"/"} texto={'icone code'} />
-        <MenuLista children='Comunidade' imagem={logoComunidade} link={"/comunidade"} texto={'icone code'} />
+        <MenuLista handleClick={getPoster} children='Comunidade' imagem={logoComunidade} link={"/comunidade"} texto={'icone code'} />
     </ul>)
 }
 
