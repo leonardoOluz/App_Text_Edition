@@ -78,12 +78,17 @@ export const usePost = () => {
         navigate("/comunidade")
     }
 
+    function getPoster(){
+        setPost([...poster])
+    }
+
     return {
         setState,
         saveNewPost,
         editionPost,
         savePostEdited,
-        searchPost
+        searchPost,
+        getPoster
     }
 
 }

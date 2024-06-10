@@ -18,7 +18,6 @@ const Formulario = () => {
     const { codigo,
         titulo,
         descricao,
-        linguagem,
         cor,
         setCodigo,
         setTitulo,
@@ -41,8 +40,6 @@ const Formulario = () => {
         setState();
         configTimeOut();
     }
-
-    console.log(linguagem)
 
     return (
         <form onSubmit={salvar} className={styles}>
