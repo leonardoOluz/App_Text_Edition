@@ -2,14 +2,12 @@ import Postagem from "components/Postagem";
 import Secao from "components/Secao";
 import { CodigoContext } from "contexts/CodigoContexto";
 import { useContext } from "react";
-// import poster from "json/postagem.json"
 
 const Comunidade = () => {
-    const {poster,  setPoster, usuarios } = useContext(CodigoContext);
+    const { usuarios, post, setPost } = useContext(CodigoContext);
 
     function liked(id) {
-        setPoster(poster.map((item) => {
-
+        setPost(post.map((item) => {
             if (item.id === id && !item.curtidas.id_usuario.includes(usuarios[1].id)) {
                 item.curtidas.id_usuario.push(usuarios[1].id);
             } else if (item.id === id && item.curtidas.id_usuario.includes(usuarios[1].id)) {
@@ -23,7 +21,7 @@ const Comunidade = () => {
     return (<main>
         <Secao>
             {
-                poster.map((postado) => <Postagem
+                post.map((postado) => <Postagem
                     poster={postado}
                     like={liked}
                     usuario={usuarios.find((usuario) => usuario.id === postado.id_usuario)}

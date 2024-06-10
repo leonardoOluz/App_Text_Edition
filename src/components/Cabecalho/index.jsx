@@ -7,15 +7,18 @@ import { useContext } from 'react';
 import { CodigoContext } from 'contexts/CodigoContexto';
 import { LuMenu } from "react-icons/lu";
 import { FaSearch } from "react-icons/fa";
+import { useNavigate } from 'react-router-dom';
 
 const Cabecalho = () => {
-    
+    const navigate = useNavigate();
     const {
         click,
         setClick,
         clickPesquisa,
         setClickPesquisa,
-        usuarios
+        usuarios,
+        poster,
+        setPost
     } = useContext(CodigoContext);
 
     const foto = require(`assets/${usuarios[1].foto}.jpg`)
@@ -29,6 +32,11 @@ const Cabecalho = () => {
         if(click) setClick((prev) => prev = !prev);
     }
 
+    function searchPost(e){
+        setPost(poster.filter((item) => item.descricao.toLowerCase().includes(e.target.value.toLowerCase())))
+        navigate("/comunidade")
+    }
+
     return (
         <>
             {clickPesquisa
@@ -38,7 +46,7 @@ const Cabecalho = () => {
                         <Imagem src={logo} alt='logo alura' altura='35px' />
                     </div>
                     <div className={styles.container}>
-                        <InputPesquisa placText='Busque por algo' text='text' stilos='pesquisa' />
+                        <InputPesquisa change={searchPost} placText='Busque por algo' text='text' stilos='pesquisa' />
                         {clickPesquisa
                             ? <></>
                             : <FaSearch className={styles.lupa_span} onClick={clickInput} size={20} color='white' />
