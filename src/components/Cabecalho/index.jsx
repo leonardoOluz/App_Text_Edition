@@ -7,34 +7,27 @@ import { useContext } from 'react';
 import { CodigoContext } from 'contexts/CodigoContexto';
 import { LuMenu } from "react-icons/lu";
 import { FaSearch } from "react-icons/fa";
-import { useNavigate } from 'react-router-dom';
+import { usePost } from 'hooks/usePost';
 
 const Cabecalho = () => {
-    const navigate = useNavigate();
     const {
         click,
         setClick,
         clickPesquisa,
         setClickPesquisa,
         usuarios,
-        poster,
-        setPost
     } = useContext(CodigoContext);
+    const { searchPost } = usePost();
 
     const foto = require(`assets/${usuarios[1].foto}.jpg`)
-    
+
     function clickMenu() {
         setClick((prev) => prev = !prev);
     }
 
     function clickInput() {
         setClickPesquisa((prev) => prev = !prev);
-        if(click) setClick((prev) => prev = !prev);
-    }
-
-    function searchPost(e){
-        setPost(poster.filter((item) => item.descricao.toLowerCase().includes(e.target.value.toLowerCase())))
-        navigate("/comunidade")
+        if (click) setClick((prev) => prev = !prev);
     }
 
     return (

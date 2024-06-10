@@ -1,6 +1,7 @@
 import { CodigoContext } from "contexts/CodigoContexto";
 import { useContext } from "react";
 import uuid from "react-native-uuid";
+import { useNavigate } from "react-router-dom";
 
 
 export const usePost = () => {
@@ -17,8 +18,11 @@ export const usePost = () => {
         setDescricao,
         setLinguagem,
         setCor,
-        setId_post
+        setId_post,
+        setPost
     } = useContext(CodigoContext);
+
+    const navigate = useNavigate();
 
     const setState = () => {
         setCodigo("")
@@ -69,11 +73,17 @@ export const usePost = () => {
         }))
     }
 
+    function searchPost(e){
+        setPost(poster.filter((item) => item.descricao.toLowerCase().includes(e.target.value.toLowerCase())))
+        navigate("/comunidade")
+    }
+
     return {
         setState,
         saveNewPost,
         editionPost,
-        savePostEdited
+        savePostEdited,
+        searchPost
     }
 
 }
