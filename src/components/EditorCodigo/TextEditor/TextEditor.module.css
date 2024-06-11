@@ -1,5 +1,6 @@
 .editor {
     width: 100%;
+    min-height: 360px;
     height: 75%;
     padding: 3em 1em 1em 1em;
     border-radius: 8px;
