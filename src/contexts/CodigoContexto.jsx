@@ -14,6 +14,7 @@ export const CodigoProvider = ({ children }) => {
     const [show, setShow] = useState(false);
     const [click, setClick] = useState(false);
     const [clickPesquisa, setClickPesquisa] = useState(false);
+    const [noCodeSpan, setNoCodeSpan] = useState(false);
     /* Variaveis de controle do formulario*/
     const [codigo, setCodigo] = useState("");
     const [linguagem, setLinguagem] = useState("");
@@ -29,7 +30,7 @@ export const CodigoProvider = ({ children }) => {
 
     useEffect(() => {
         setPost([...poster])
-    },[poster])
+    }, [poster])
 
     useEffect(() => {
 
@@ -48,6 +49,8 @@ export const CodigoProvider = ({ children }) => {
 
     return (
         <CodigoContext.Provider value={{
+            noCodeSpan,
+            setNoCodeSpan,
             poster,
             setPoster,
             usuarios,
@@ -72,7 +75,7 @@ export const CodigoProvider = ({ children }) => {
             setDescricao,
             id_post,
             setId_post,
-            post, 
+            post,
             setPost
         }}>
             {children}
