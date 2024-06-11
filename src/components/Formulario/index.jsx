@@ -25,6 +25,7 @@ const Formulario = () => {
         setLinguagem,
         setCor,
         id_post,
+        setNoCodeSpan
     } = useContext(CodigoContext);
 
     function configTimeOut() {
@@ -35,15 +36,25 @@ const Formulario = () => {
 
     function salvar(e) {
         e.preventDefault()
-        id_post ? savePostEdited(id_post) : saveNewPost();
-        setHover(true);
-        setState();
-        configTimeOut();
+        if (codigo) {
+            id_post ? savePostEdited(id_post) : saveNewPost()
+            setHover(true);
+            setState();
+            configTimeOut();
+        } else {
+            setNoCodeSpan(prev => prev = !prev)
+        }
+    }
+
+    function onChangeEdition(value) {
+        setCodigo((prev) => prev = value)
+        setNoCodeSpan(prev => prev = false)
     }
 
     return (
         <form onSubmit={salvar} className={styles}>
-            <EditorCodigo changed={(value) => setCodigo((prev) => prev = value)} valor={codigo} />
+
+            <EditorCodigo changed={onChangeEdition} valor={codigo} />
             <div className={styles.container_formulario}>
                 <label className={styles.label_form}>Seu Projeto</label>
                 <InputPesquisa
