@@ -19,7 +19,8 @@ export const usePost = () => {
         setLinguagem,
         setCor,
         setId_post,
-        setPost
+        setPost,
+        setNoCodeSpan
     } = useContext(CodigoContext);
 
     const navigate = useNavigate();
@@ -31,6 +32,7 @@ export const usePost = () => {
         setLinguagem("")
         setCor("#5081FB")
         setId_post()
+        setNoCodeSpan(p => p = false)
     }
 
     const saveNewPost = () => {
@@ -73,12 +75,12 @@ export const usePost = () => {
         }))
     }
 
-    function searchPost(e){
+    const  searchPost = (e) => {
         setPost(poster.filter((item) => item.descricao.toLowerCase().includes(e.target.value.toLowerCase())))
         navigate("/comunidade")
     }
 
-    function getPoster(){
+    const getPoster = () => {
         setPost([...poster])
     }
 
