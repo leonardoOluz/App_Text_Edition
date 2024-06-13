@@ -21,7 +21,7 @@ const EditorCodigo = ({ changed, valor }) => {
                     <div className={styles.circulos} style={{ backgroundColor: '#27C93F' }} />
                 </div>
             </div>
-            {noCodeSpan && <span className={styles.no_code}>Ops, faltou postar seu codigo!</span>}
+            {noCodeSpan && <span className={`no_code`}>Ops, faltou postar seu codigo!</span>}
             <button
                 className={styles.btn}
                 onClick={highlight}

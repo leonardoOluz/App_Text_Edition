@@ -13,6 +13,8 @@ const Formulario = () => {
     const navigate = useNavigate()
     const [toggle, setToggle] = useState(false)
     const [hover, setHover] = useState(false)
+    const [spanTitulo, setSpanTitulo] = useState(false);
+    const [spanDescricao, setSpanDescricao] = useState(false);
     const { setState, saveNewPost, savePostEdited } = usePost();
 
     const { codigo,
@@ -36,13 +38,16 @@ const Formulario = () => {
 
     function salvar(e) {
         e.preventDefault()
-        if (codigo) {
+
+        if (!codigo || !titulo || !descricao) {
+            !codigo && setNoCodeSpan(prev => prev = true)
+            !titulo && setSpanTitulo(prev => prev = true)
+            !descricao && setSpanDescricao(prev => prev = true)
+        } else {
             id_post ? savePostEdited(id_post) : saveNewPost()
             setHover(true);
             setState();
             configTimeOut();
-        } else {
-            setNoCodeSpan(prev => prev = !prev)
         }
     }
 
@@ -58,18 +63,24 @@ const Formulario = () => {
             <div className={styles.container_formulario}>
                 <label className={styles.label_form}>Seu Projeto</label>
                 <InputPesquisa
-                    check
                     placText='Nome do seu projeto'
                     text='text' stilos=""
-                    change={(e) => setTitulo((prev) => prev = e.target.value)}
+                    change={(e) => {
+                        setTitulo((prev) => prev = e.target.value)
+                        setSpanTitulo(p => p = false)
+                    }}
                     valor={titulo} />
+                <span className={spanTitulo ? 'no_code' : 'hidden'}>Ops o titulo é obrigatorio!</span>
                 <textarea
-                    required
                     value={descricao}
-                    onChange={(e) => setDescricao((prev) => prev = e.target.value)}
+                    onChange={(e) => {
+                        setDescricao((prev) => prev = e.target.value)
+                        setSpanDescricao(p => p = false)
+                    }}
                     className='input_padrao' style={{ width: 'auto', padding: '1em', resize: 'none' }}
                     placeholder='Descrição do seu projeto'
                 />
+                <span className={spanDescricao ? 'no_code' : 'hidden'}>Por favor coloque uma descrição!</span>
                 <label>Personalização</label>
                 <div className={styles.container}>
                     <select

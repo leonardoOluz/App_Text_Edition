@@ -1,6 +1,7 @@
 import styles from './InputPesquisa.module.css';
 
-const InputPesquisa = ({check = false, nameInput, text = 'text', placText, stilos = "", valor, change }) => {
+const InputPesquisa = ({ check = false, nameInput, text = 'text', placText, stilos = "", valor, change }) => {
+
     return (
         <input
             required={check}
