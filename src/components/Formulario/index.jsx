@@ -99,7 +99,7 @@ const Formulario = () => {
                     />
                 </div>
                 <Botao Children='Salvar Projeto' hovered={hover && "btn_hover"} />
-                {toggle && navigate("/comunidade")}
+                {toggle && navigate("/")}
             </div>
         </form>
     )

@@ -8,6 +8,7 @@ import { CodigoContext } from 'contexts/CodigoContexto';
 import { LuMenu } from "react-icons/lu";
 import { FaSearch } from "react-icons/fa";
 import { usePost } from 'hooks/usePost';
+import { Link } from 'react-router-dom';
 
 const Cabecalho = () => {
     const {
@@ -36,7 +37,9 @@ const Cabecalho = () => {
                 ? <></>
                 : <header className={styles.cabecalho} >
                     <div className={styles.logo}>
-                        <Imagem src={logo} alt='logo alura' altura='35px' />
+                        <Link to="/">
+                            <Imagem src={logo} alt='logo alura' altura='35px' />
+                        </Link>
                     </div>
                     <div className={styles.container}>
                         <InputPesquisa change={searchPost} placText='Busque por algo' text='text' stilos='pesquisa' />

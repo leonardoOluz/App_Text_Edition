@@ -1,7 +1,7 @@
 import Formulario from "components/Formulario";
 import Secao from "components/Secao";
 
-const Home = () => {
+const FormularioEdicao = () => {
     return (<main>
         <Secao>
             <Formulario />
@@ -9,4 +9,4 @@ const Home = () => {
     </main>)
 }
 
-export default Home;
+export default FormularioEdicao;

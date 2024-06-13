@@ -77,7 +77,7 @@ export const usePost = () => {
 
     const  searchPost = (e) => {
         setPost(poster.filter((item) => item.descricao.toLowerCase().includes(e.target.value.toLowerCase())))
-        navigate("/comunidade")
+        navigate("/")
     }
 
     const getPoster = () => {
