@@ -6,8 +6,8 @@ import { usePost } from "hooks/usePost";
 const CampoLista = () => {
     const { setState, getPoster } = usePost();
     return (<ul className={styles.ul}>
-        <MenuLista handleClick={setState} children='Editor de código' imagem={logoCode} link={"/"} texto={'icone code'} />
-        <MenuLista handleClick={getPoster} children='Comunidade' imagem={logoComunidade} link={"/comunidade"} texto={'icone code'} />
+        <MenuLista handleClick={getPoster} children='Comunidade' imagem={logoComunidade} link={"/"}  texto={'icone code'} />
+        <MenuLista handleClick={setState} children='Editor de código' imagem={logoCode} link={"/editor"} texto={'icone code'} />
     </ul>)
 }
 
